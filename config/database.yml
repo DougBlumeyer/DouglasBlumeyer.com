@@ -13,6 +13,9 @@ default: &default
 development:
   <<: *default
   database: Douglas_Blumeyer_Dot_Com_development
+  # password: Xr-312kum!
+  username: pouggie-lenovo
+  password: hI4f1PGp5FCG
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,7 +23,13 @@ development:
 test:
   <<: *default
   database: Douglas_Blumeyer_Dot_Com_test
+  # password: Xr-312kum!
+  username: pouggie-lenovo
+  password: hI4f1PGp5FCG
 
 production:
   <<: *default
   database: Douglas_Blumeyer_Dot_Com_production
+  username: pouggie-lenovo
+  password: hI4f1PGp5FCG
+  # password: Xr-312kum!
