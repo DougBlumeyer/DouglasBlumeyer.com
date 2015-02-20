@@ -113,15 +113,24 @@
 		</div>
 	</div>
 
-
-
+  <%#= javascript_include_tag 'main' %>
+  <!-- // <script src="../assets/javascripts/main.js"></script> -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 	<!-- // <script src="../assets/javascripts/classie.js"></script>
   //   <script src="../assets/javascripts/bootstrap.min.js"></script>
   //   <script src="../assets/javascripts/smoothscroll.js"></script>
-	// <script src="../assets/javascripts/main.js"></script>
+
   //   <script src="http://blacktie.co/adpacks/demoad.js"></script> -->
+  <script>
+    $('#menuToggle, .menu-close').on('click', function(){
+      console.log("howdy pahdnah jajaja");
+      // debugger
+      $('#menuToggle').toggleClass('active');
+      $('body').toggleClass('body-push-toleft');
+      $('#theMenu').toggleClass('menu-open');
+    });
+  </script>
 </body>
 </html>
