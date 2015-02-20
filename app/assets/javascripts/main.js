@@ -1,6 +1,6 @@
 // ;(function(){
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
 
 			// Menu settings
 			$('#menuToggle, .menu-close').on('click', function(){
@@ -13,4 +13,4 @@ $( document ).ready(function() {
 
 
 // })(jQuery)
-});
+// });
