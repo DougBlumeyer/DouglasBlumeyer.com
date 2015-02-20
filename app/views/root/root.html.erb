@@ -10,15 +10,17 @@
 			<h1 class="logo"><a href="index.html#home">D.Blumeyer</a></h1>
       <%#= fa_icon "camera-retro" %>
       <!-- <span class="fa fa-camera-retro"></span> -->
-			<i class="icon-remove menu-close"></span></i>
+			<!-- <i class="icon-remove menu-close"></span></i> -->
 			<a href="#home" class="smoothScroll">Home</a>
 			<a href="#about" class="smoothScroll">About</a>
 			<a href="#portfolio" class="smoothScroll">Portfolio</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
-			<a href="#"><i class="icon-facebook"></i></a>
-			<a href="#"><i class="icon-twitter"></i></a>
-			<a href="#"><i class="icon-dribbble"></i></a>
-			<a href="#"><i class="icon-envelope"></i></a>
+
+      <a href="https://github.com/DougBlumeyer" target="_blank"><i class="fa fa-github-square"></i></a>
+      <a href="https://linkedin.com/in/douglasblumeyer" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+      <a href="https://www.facebook.com/blumeyer" target="_blank"><i class="fa fa-facebook-official"></i></a>
+      <a href="https://twitter.com/dblumeyer" target="_blank"><i class="fa fa-twitter-square"></i></a>
+
 		</div>
 
 		<!-- Menu button -->
@@ -46,7 +48,7 @@
 
 				<br>
 				<br>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-md-6 col-md-offset-3">
 
 				</div>
 			</div>
@@ -59,19 +61,20 @@
 	<section id="about" name="about"></section>
 	<div id="f">
 		<div class="container">
+      <h3>ABOUT ME</h3>
+      <br>
 			<div class="row">
-				<h3>ABOUT ME</h3>
 				<!-- <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p> -->
-        <br>
-        <%= image_tag "good_one.JPG", height: "50%", width: "50%" %>
-        <br>S
+        <div class="col-md-7">
+          <%= image_tag "good_one.JPG", width: "100%" %>
+        </div>
 				<!-- INTRO INFORMATIO-->
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-md-3">
 					<p>I build inspiring web experiences.</p>
-					<p>My passion is in bridging the technical and aesthetic: finding the music in math, the code in poetry, and vice versa.</p>
+					<p>My passion is bridging<br>the technical and aesthetic:<br>finding the music in math,<br>the code in poetry,<br>and vice versa.</p>
           <p>I also have a thing for solving tough problems and teaching others how to approach them.</p>
-					<p>I'm based in San Francisco, and I'm available for full-time work.</p>
-					<p><button type="button" class="btn btn-warning">MESSAGE ME</button></p>
+					<p>I'm based in San Francisco,<br> and available for full-time work.</p><br>
+					<p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p>
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -82,32 +85,69 @@
 	<section id="portfolio" name="portfolio"></section>
 	<div id="f">
 		<div class="container">
-			<div class="row centered">
-				<h3>RECENT PROJECTS</h3>
+      <h3>RECENT PROJECTS</h3>
+      <br>
 
-				<div class="col-lg-6 col-lg-offset-3">
+			<a href="http://www.geometrhythm.com" target="_blank"><div class="row">
+				<div class="col-md-7">
           <%= image_tag "geometrhythm-screenshot.jpg", width: "100%" %>
-					<br><a href="http://www.geometrhythm.com" target="_blank">Geometrhythm</a>
+        </div>
+        <div class="col-md-3">
+          <h5>Geometrhythm</h5></a><br>
+          <p>A tool I built largely for my own benefit as a musician. It allows one to manipulate a looping rhythm, represented visually as a ring of onset beats and rest beats, while it’s playing. And more importantly, data visualizations update dynamically as you mutate the rhythm, to give you feedback on various mathematical properties, so you can effectively optimize the rhythm to your musical needs.</p>
+        </div>
+      </div>
+      <br>
+
+      <a href="http://www.rainbowbbles.com" target="_blank"><div class="row">
+        <div class="col-md-7">
           <%= image_tag "rainbowbbles-screenshot.jpg", width: "100%" %>
-          <br><a href="http://www.rainbowbbles.com" target="_blank">Rainbowbbles</a>
+        </div>
+        <div class="col-md-3">
+          <h5>Rainbowbbles</h5></a><br>
+          <p>I set out to create an open-ended play experience that engaged many senses together. The 'bowbbles pop into their constituent primary colors, sized to preserve the spectrum. And the pitch of their pop is tuned proportionaly by size to the musical mode. Pop obsessively, or sit back and let them merge into a super-'bowbble!</p>
+        </div>
+      </div>
+      <br>
+
+      <a href="https://github.com/DougBlumeyer/IntegratedActiveRecordLiteAndRailsLite" target="_blank"><div class="row">
+        <div class="col-md-7">
           <%= image_tag "activerecordlite-screenshot.jpg", width: "100%" %>
-          <br><a href="https://github.com/DougBlumeyer/IntegratedActiveRecordLiteAndRailsLite" target="_blank">ActiveRecordLite + RailsLite</a>
-				</div><!-- col-lg-8 -->
-			</div><!-- row -->
+        </div>
+        <div class="col-md-3">
+          <h5>RailsLite</h5></a><br>
+          <p>In a feat of metaprogramming I recreated the core functionality of ActiveRecord and ActionController, the base classes for Ruby on Rails Models and Controllers, respectively. With my lite version of Rails, you can create a basic website with associations, flash, and even auth! Not that I would recommend using my version over the real thing, but just saying, I know the backend pretty well.</p>
+        </div>
+      </div>
+      <br>
+
 		</div><!-- container -->
 	</div>	<!-- f -->
 
 	<!-- ========== CONTACT SECTION ========== -->
 	<section id="contact" name="contact"></section>
-	<div id="f">
+	<div id="f2">
 		<div class="container">
 			<div class="row">
 				<h3>CONTACT ME</h3>
 
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-md-6 col-md-offset-3">
 					<p>200 Dolores St. #12<br/>San Francisco, CA 94103<br/>847.922.1483</p>
 					<p>douglas.blumeyer@gmail.com</p>
-					<p><button type="button" class="btn btn-warning">MESSAGE ME</button></p>
+          <a href="https://github.com/DougBlumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-github-square"></i></a>
+          <a href="https://linkedin.com/in/douglasblumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-linkedin-square"></i></a>
+          <a href="https://www.facebook.com/blumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-facebook-official"></i></a>
+          <a href="https://twitter.com/dblumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-twitter-square"></i></a>
+
+          <br>
+          <br>
+					<p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p>
+
+          <br><span style="font-size: 12px">for the extra-curious</span><br>
+          <a href="https://cmloegcmluin.wordpress.com" target="_blank"><i style="font-size: 18px" class="fa fa-wordpress"></i></a>
+          <a href="https://vimeo.com/douglasblumeyer" target="_blank"><i style="font-size: 18px" class="fa fa-vimeo-square"></i></a>
+          <a href="https://www.flickr.com/photos/cmloegcmluin/sets/" target="_blank"><i style="font-size: 18px" class="fa fa-flickr"></i></a>
+          <a href="https://soundcloud.com/shmlegshmlin" target="_blank"><i style="font-size: 18px" class="fa fa-soundcloud"></i></a>
 				</div>
 			</div>
 		</div>
