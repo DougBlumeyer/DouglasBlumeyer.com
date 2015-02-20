@@ -7,9 +7,24 @@
  * URL: http://blacktie.co
  */
 
+ // *{font-family: 'Maven Pro', sans-serif;}
+
+// @font-face {
+//     font-family: 'Glyphicons Halflings';
+//     src: font-url('glyphicons-halflings-regular.eot');
+//     src: font-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), font-url('glyphicons-halflings-regular.woff') format('woff'), font-url('glyphicons-halflings-regular.ttf') format('truetype'), font-url('glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+// }
+ // @font-face {
+ //   font-family: 'Glyphicons Halflings';
+ //   src: font-url('glyphicons-halflings-regular.eot');
+ //   src: font-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('glyphicons-halflings-regular.woff') format('woff'), url('glyphicons-halflings-regular.ttf') format('truetype'), url('glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+ // }
+
 body {
-  background-color: #f2f2f2;
-    font-family: 'EB Garamond', serif;
+  // background-color: #f2f2f2;
+  // background: #1a1a1a;
+  background-color: #202020;
+    font-family: 'Maven Pro', serif;
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -79,42 +94,46 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-  background-image: image-url("invert_spiral.jpg");
-  background: contain;
+  background-image: image-url("spiral_smaller-tiltshift-grey.jpg");
+  // background: no-repeat;
 	/*background: url(../images/header-bg.jpg) no-repeat center top;*/
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
 	background-attachment: relative;
+  background-repeat: no-repeat;
 	background-position: center center;
 	min-height: 700px;
 	width: 100%;
 
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
+
+    // -webkit-background-size: 100%;
+    // -moz-background-size: 100%;
+    // -o-background-size: 100%;
     background-size: 100%;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
     // background-size: 100% 100%;
-    background-size: cover;
+    background-size: contain;
 }
 
 #headerwrap h1 {
 	margin-top: 150px;
-	color: white;
+	color: #eeeeee;
 	font-size: 70px;
 	font-weight: 700;
 }
 
 #headerwrap h3 {
-	color: white;
-	font-size: 30px;
+	color: #eeeeee;
+	font-size: 24px;
 	font-weight: 100;
-    font-family: 'EB Garamond', serif;
-    font-style: oblique;
+    // font-family: 'EB Garamond', serif;
+   //font-family: 'Amaranth', serif;
+   font-family: 'Maven Pro', serif;
+    // font-style: oblique;
 }
 
 #headerwrap .logo {
@@ -127,7 +146,7 @@ a:after {
 /* Footer Wrap */
 
 #f {
-	background: #1a1a1a;
+	background: #202020;
   // background: #CC290C;
 	padding-top: 70px;
 	padding-bottom: 70px;
@@ -135,7 +154,7 @@ a:after {
 }
 
 #f h3 {
-	color: white;
+	color: #eeeeee;
 	font-size: 28px;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -177,19 +196,20 @@ a:after {
 	position: absolute;
 	top: 0;
 	left: 60px;
-	background: #1a1a1a;
+	background: #202020;
 	width: 200px;
 	height: 100%;
 }
 
 .menu h1.logo a {
-	font-family: 'Oswald', sans-serif;
+	// font-family: 'Oswald', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: 0.15em;
 	line-height: 40px;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: #dddddd;
 	margin-top: 20px;
 }
 

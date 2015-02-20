@@ -21,8 +21,8 @@
 
 
 
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'> -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,8 +36,10 @@
 	<!-- Menu -->
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">Minimal</a></h1>
-			<i class="icon-remove menu-close"></i>
+			<h1 class="logo"><a href="index.html#home">D.Blumeyer</a></h1>
+      <%#= fa_icon "camera-retro" %>
+      <!-- <span class="fa fa-camera-retro"></span> -->
+			<i class="icon-remove menu-close"></span></i>
 			<a href="#home" class="smoothScroll">Home</a>
 			<a href="#about" class="smoothScroll">About</a>
 			<a href="#portfolio" class="smoothScroll">Portfolio</a>
@@ -49,7 +51,10 @@
 		</div>
 
 		<!-- Menu button -->
-		<div id="menuToggle"><i class="icon-reorder"></i></div>
+		<!-- <div id="menuToggle"><i class="glyphicon glyphicon-menu-hamburger"></i></span></div> -->
+    <!-- <i class="glyphicon glyphicon-plane"></i> -->
+    <!-- <div id="menuToggle"><i class="icon-bars"></i></span></div> -->
+    <div id="menuToggle"><%= fa_icon "bars" %></div>
 	</nav>
 
 
@@ -63,12 +68,14 @@
 			</div>
 			<br>
 			<div class="row" id="splash">
+        <br><br>  <br><br>  <br><br>  <br><br>
 				<h1>DOUGLAS BLUMEYER</h1>
-				<br>
-				<h3>web developer | VR pioneer | artist</h3>
+				<h3>web developer | VR pioneer | multimedia artist</h3>
+
 				<br>
 				<br>
 				<div class="col-lg-6 col-lg-offset-3">
+
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -83,12 +90,15 @@
 			<div class="row">
 				<h3>ABOUT ME</h3>
 				<!-- <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p> -->
-
+        <br>
+        <%= image_tag "good_one.JPG", height: "50%", width: "50%" %>
+        <br>S
 				<!-- INTRO INFORMATIO-->
 				<div class="col-lg-6 col-lg-offset-3">
-					<p>I build awesome web experiences, and I'm based in San Francisco.</p>
-					<p>My passion is overcoming tough coding challenges, and creating results that are beautiful for consumers both of the code itself and the site it powers.</p>
-					<p>I'm avaiable for full-time work.</p>
+					<p>I build inspiring web experiences.</p>
+					<p>My passion is in bridging the technical and aesthetic: finding the music in math, the code in poetry, and vice versa.</p>
+          <p>I also have a thing for solving tough problems and teaching others how to approach them.</p>
+					<p>I'm based in San Francisco, and I'm available for full-time work.</p>
 					<p><button type="button" class="btn btn-warning">MESSAGE ME</button></p>
 				</div>
 			</div>
@@ -104,9 +114,12 @@
 				<h3>RECENT PROJECTS</h3>
 
 				<div class="col-lg-6 col-lg-offset-3">
-					<br><a href="www.geometrhythm.com">Geometrhythm</a>
-          <br><a href="www.rainbowbbles.com">Rainbowbbles</a>
-          <br><a href="https://github.com/DougBlumeyer/IntegratedActiveRecordLiteAndRailsLite">ActiveRecordLite + RailsLite</a>
+          <%= image_tag "geometrhythm-screenshot.jpg", width: "100%" %>
+					<br><a href="http://www.geometrhythm.com" target="_blank">Geometrhythm</a>
+          <%= image_tag "rainbowbbles-screenshot.jpg", width: "100%" %>
+          <br><a href="http://www.rainbowbbles.com" target="_blank">Rainbowbbles</a>
+          <%= image_tag "activerecordlite-screenshot.jpg", width: "100%" %>
+          <br><a href="https://github.com/DougBlumeyer/IntegratedActiveRecordLiteAndRailsLite" target="_blank">ActiveRecordLite + RailsLite</a>
 				</div><!-- col-lg-8 -->
 			</div><!-- row -->
 		</div><!-- container -->
