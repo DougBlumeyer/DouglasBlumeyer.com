@@ -15,6 +15,7 @@
 			<a href="#about" class="smoothScroll">About</a>
       <a href="#resume" class="smoothScroll">Résumé</a>
 			<a href="#portfolio" class="smoothScroll">Portfolio</a>
+      <a href="#wip" class="smoothScroll">Works in Progress</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
 
       <a href="https://github.com/DougBlumeyer" target="_blank"><i class="fa fa-github-square"></i></a>
@@ -86,32 +87,38 @@
 		</div><!-- /container -->
 	</div><!-- /f -->
 
-  <!-- ========== ABOUT SECTION ========== -->
+  <!-- ========== RESUME SECTION ========== -->
   <section id="resume" name="resume"></section>
   <div id="f">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-1">
-          <h3>RESUME</h3>
+          <h3>RÉSUMÉ</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-md-9 col-md-offset-1">
           <br>
-          <a href="/images/Douglas_Blumeyer_2015_resume.pdf" download><i style="font-size: 36px; color: #f85c37" class="fa fa-file"></i></a>
+          <!-- <a href="assets/images/Douglas_Blumeyer_2015_resume.pdf" target="_blank"><i style="font-size: 36px; color: #f85c37" class="fa fa-file"></i></a> -->
+          <!-- <i style="font-size: 36px; color: #f85c37" class="fa fa-file"> -->
+            <!-- <%#= link_to "", "Douglas_Blumeyer_2015_resume.pdf", class: "fa fa-file" %> -->
+            <!-- <%#= link_to "", "#{image_tag 'Douglas_Blumeyer_2015_resume.pdf'}", class: "fa fa-file" %> -->
+            <!-- <%#= link_to "", "/assets/images/Douglas_Blumeyer_2015_resume.pdf", class: "fa fa-file" %> -->
+            <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file", style: "font-size: 36px" %>
+            <!-- </i> -->
           <br><br><h5 style="text-align: left">Education</h5>
-          <span style="color: #f85c37"><br>Stanford University '08 BA Film & Media Studies</span>
+          <br><strong>Stanford University</strong> | '08 <span style="color: #f85c37">| BA Film & Media Studies</span>
           <br><br><h5 style="text-align: left">Work Experience</h5>
-          <span style="color: #f85c37">
-          <br>Contextucation | #1 rated WineGlass mobile app | 2014 | Objective-C Contractor
-          <br>Bloodhound | SF tech startup | 2012-2014 | Operations Manager
-          <br>VHIL | Stanford's virtual reality lab | 2005-2008 | Research Assistant & Graphic Designer</span>
+
+          <br><strong>Contextucation</strong> | #1 rated WineGlass mobile app <span style="color: #f85c37">| 2014 | Objective-C Contractor</span>
+          <br><strong>Bloodhound</strong> | SF tech startup <span style="color: #f85c37">| 2012-2014 | Operations Manager</span>
+          <br><strong>VHIL</strong> | Stanford's virtual reality lab <span style="color: #f85c37">| 2005-2008 | Research Assistant & Graphic Designer</span>
         </div>
       </div>
     </div><!-- /container -->
   </div><!-- /f -->
 
-	<!-- ========== CAROUSEL SECTION ========== -->
+	<!-- ========== PORTFOLIO SECTION ========== -->
 	<section id="portfolio" name="portfolio"></section>
 	<div id="f">
 		<div class="container">
@@ -130,7 +137,7 @@
         <div class="col-md-3">
           <h5>Geometrhythm</h5></a><br>
           <p>A tool I built largely for my own benefit as a musician. It allows one to manipulate a looping rhythm, represented visually as a ring of onset beats and rest beats, while it’s playing. And more importantly, data visualizations update dynamically as you mutate the rhythm, to give you feedback on various mathematical properties, so you can effectively optimize the rhythm to your musical needs.</p>
-          <span class="tools">tools used: Rails, Backbone.js, HTML5 Canvas, jQuery, jQuery UI </span>
+          <span class="tools"><strong>tools used:</strong> Rails, Backbone.js, HTML5 Canvas, jQuery, jQuery UI </span>
         </div>
       </div>
       <br><br>
@@ -142,8 +149,8 @@
         </div>
         <div class="col-md-3">
           <h5>Rainbowbbles</h5></a><br>
-          <p>I set out to create an open-ended play experience that engaged many senses together. The 'bowbbles pop into their constituent primary colors, sized to preserve the spectrum. And the pitch of their pop is tuned proportionaly by size to the musical mode. Pop obsessively, or sit back and let them merge into a super-'bowbble!</p>
-          <span class="tools">tools used: jQuery, HTML5 Canvas</span>
+          <p>I set out to create an open-ended play experience that engaged many senses together. The 'bowbbles pop into their constituent primary colors, sized to preserve the spectrum. And the pitch of their pop is tuned proportionaly by size to the musical mode. Pop obsessively, or sit back and let them merge into a super-'bowbble.</p>
+          <span class="tools"><strong>tools used:</strong> jQuery, HTML5 Canvas</span>
         </div>
       </div>
       <br><br>
@@ -155,10 +162,24 @@
         </div>
         <div class="col-md-3">
           <h5>RailsLite</h5></a><br>
-          <p>In a feat of metaprogramming I recreated the core functionality of ActiveRecord and ActionController, the base classes for Ruby on Rails Models and Controllers, respectively. With my lite version of Rails, you can create a basic website with associations, flash, and even auth! Not that I would recommend using my version over the real thing, but just saying, I know the backend pretty well.</p>
-          <span class="tools">tools used: Ruby</span>
+          <p>In a feat of metaprogramming I recreated the core functionality of ActiveRecord and ActionController, the base classes for Ruby on Rails Models and Controllers, respectively. With my lite version of Rails, you can create a basic website with associations, flash, and even auth. Not that I would recommend using my version over the real thing just yet.</p>
+          <span class="tools"><strong>tools used:</strong> Ruby</span>
         </div>
       </div>
+
+		</div><!-- container -->
+	</div>	<!-- f -->
+
+  <!-- ========== WORKS IN PROGRESS SECTION ========== -->
+  <section id="wip" name="wip"></section>
+  <div id="f">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+          <h3>WORKS IN PROGRESS</h3>
+        </div>
+      </div>
+      <br>
 
       <a href="http://www.last-mountain.com/" target="_blank"><div class="row">
         <div class="col-md-6 col-md-offset-1">
@@ -168,10 +189,10 @@
         <div class="col-md-3">
           <h5>The Last Mountain</h5></a><br>
           <p>The Last Mountain team formed at San Francisco's first VR Hackathon. We're working hard to create one of the world's very first animated virtual reality short films. I'm the assistant game engine guy - I work on lighting, camera, and editing on the VR side.</p>
-          <span class="coming-soon">COMING SOON</span><br>
-          <span class="tools">tools used: Unity3D game engine, Oculus Rift SDK</span>
+          <span class="tools"><strong>tools used:</strong> Unity3D game engine, Oculus Rift SDK</span>
         </div>
       </div>
+      <br><br>
 
       <a href="http://www.binocul.us/" target="_blank"><div class="row">
         <div class="col-md-6 col-md-offset-1">
@@ -181,13 +202,27 @@
         <div class="col-md-3">
           <h5>Binoculus</h5></a><br>
           <p>Binoculus is a mobile game you can experience in VR simply by inserting your mobile device into a Google Cardboard, DODOcase, or GearVR. It's a hidden object puzzle adventure, taking advantage of the strenghts and limitations of present VR technology. </p>
-          <span class="coming-soon">COMING SOON</span><br>
-          <span class="tools">tools used: Unity3D game engine, Durovis Dive SDK</span>
+          <span class="tools"><strong>tools used:</strong> Unity3D game engine, Durovis Dive SDK</span>
         </div>
       </div>
+      <br><br>
 
-		</div><!-- container -->
-	</div>	<!-- f -->
+      <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank"><div class="row">
+        <div class="col-md-6 col-md-offset-1">
+          <%= image_tag "FMI_screenshot.jpg", width: "100%" %>
+          <br><br>
+        </div>
+        <div class="col-md-3">
+          <h5>Fun Musical Ideas</h5></a><br>
+          <p>A compendium of 26 experimental musical techniques I've discovered and am building tools for. Includes wrarp, reverge, unshadow, aharmonics, recursive Shepard-Risset Glissando, and more.</p>
+          <p>Latest draft here: <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank"><i style="font-size: 28px" class="fa fa-file"></i></a></p>
+          <span class="tools"><strong>tools used:</strong> Max/MSP</span>
+        </div>
+      </div>
+      <br><br>
+
+    </div><!-- /container -->
+  </div><!-- /f -->
 
 	<!-- ========== CONTACT SECTION ========== -->
 	<section id="contact" name="contact"></section>
@@ -206,18 +241,29 @@
           <br>
 					<p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p>
 
-          <span style="color: #f85c37">
-          <!-- <br><span style="font-size: 12px">for the extra-curious</span><br> -->
-          <a href="https://cmloegcmluin.wordpress.com" target="_blank"><i style="font-size: 18px" class="fa fa-wordpress"></i></a>&nbsp; dream blog, film reviews, linguistics<br>
-          <a href="https://vimeo.com/douglasblumeyer" target="_blank"><i style="font-size: 18px" class="fa fa-vimeo-square"></i></a>&nbsp; kickstarter trailers, talks<br>
-          <a href="https://www.flickr.com/photos/cmloegcmluin/sets/" target="_blank"><i style="font-size: 18px" class="fa fa-flickr"></i></a>&nbsp; drawings of my fantasy world & its denizens<br>
-          <a href="https://soundcloud.com/shmlegshmlin" target="_blank"><i style="font-size: 18px" class="fa fa-soundcloud"></i></a>&nbsp; audio experiments for my Fun Musical Ideas, music from my past life<br>
-          <a href="https://twitter.com/dblumeyer" target="_blank"><i style="font-size: 18px" class="fa fa-twitter-square"></i></a>&nbsp; silliness<br>
-      </span>
+
         </div>
 			</div>
 		</div>
 	</div>
+
+  <div id="f3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <!-- <span style=""color: #f85c37; "text-align: left"> -->
+            <!-- <br><span style="font-size: 12px">for the extra-curious</span><br> -->
+            <a href="https://cmloegcmluin.wordpress.com" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-wordpress"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; dream blog; film reviews; linguistics</span><br>
+            <a href="https://vimeo.com/douglasblumeyer" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-vimeo-square"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; kickstarter trailers; talks on VR, xenharmonics, etc</span><br>
+            <a href="https://www.flickr.com/photos/cmloegcmluin/sets/" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-flickr"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; drawings of my fantasy world & its denizens</span><br>
+            <a href="https://soundcloud.com/shmlegshmlin" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-soundcloud"></i></a><span style="color: #f85c37">&nbsp; audio experiments; compositions from my past life</span><br>
+            <a href="https://twitter.com/dblumeyer" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-twitter-square"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; silliness</span><br>
+          <!-- </span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
 
   <%#= javascript_include_tag 'main' %>
   <!-- // <script src="../assets/javascripts/main.js"></script> -->
