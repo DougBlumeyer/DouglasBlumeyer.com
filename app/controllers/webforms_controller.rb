@@ -15,6 +15,10 @@ class WebformsController < ApplicationController
     # redirect_to :root
   end
 
+  def show
+    render :show
+  end
+
   private
 
   def webform_params
