@@ -277,7 +277,8 @@
   </script>
 
   <div class="modal">
-    <form class="modal-form" action="<%= webforms_url %>" method="POST">
+    <!-- <form class="modal-form" action="<%= webforms_url %>" method="POST"> -->
+    <form class="modal-form">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
       <span class="modal-close js-modal-close">&times;</span>
@@ -324,6 +325,7 @@
     });
   });
   </script>
+
 
 </body>
 </html>
