@@ -44,7 +44,7 @@
 			<div class="row" id="splash">
         <br><br>  <br><br>  <br><br>  <br><br>
 				<h1>DOUGLAS BLUMEYER</h1>
-				<h3>web developer | VR pioneer | multimedia artist</h3>
+				<h3>web developer | VR pioneer | artist</h3>
 
 				<br>
 				<br>
@@ -81,7 +81,8 @@
 					<p style="font-size: 13px">My passion is bridging the technical and aesthetic: finding the music in math, the code in poetry, and vice versa.</p>
           <p style="font-size: 13px">I also have a thing for solving tough problems and teaching others how to approach them.</p>
 					<p style="font-size: 13px">I'm based in San Francisco, and available for full-time work.</p><br>
-					<p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p>
+					<!-- <p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p> -->
+          <p><button type="button" class="btn btn-warning js-modal-open">MESSAGE ME</button></p>
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -239,8 +240,8 @@
 
           <br>
           <br>
-					<p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p>
-
+					<!-- <p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p> -->
+          <p><button type="button" class="btn btn-warning js-modal-open">MESSAGE ME</button></p>
 
         </div>
 			</div>
@@ -265,16 +266,6 @@
   </div>
   <br><br><br><br>
 
-  <%#= javascript_include_tag 'main' %>
-  <!-- // <script src="../assets/javascripts/main.js"></script> -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<!-- // <script src="../assets/javascripts/classie.js"></script>
-  //   <script src="../assets/javascripts/bootstrap.min.js"></script>
-  //   <script src="../assets/javascripts/smoothscroll.js"></script>
-
-  //   <script src="http://blacktie.co/adpacks/demoad.js"></script> -->
   <script>
     $('#menuToggle, .menu-close').on('click', function(){
       // console.log("howdy pahdnah jajaja");
@@ -284,5 +275,55 @@
       $('#theMenu').toggleClass('menu-open');
     });
   </script>
+
+  <div class="modal">
+    <form class="modal-form" action="<%= webforms_url %>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <span class="modal-close js-modal-close">&times;</span>
+
+      <h1>What's up?</h1>
+
+      <br>Would you like to work together on something? I'm looking forward to hearing from you.<br><br>
+
+      <div class="input">
+        <label for="form-visitor">Your Name</label>
+        <input style="position: absolute; left: 125px" type="text" id="form-visitor" name="webform[visitor]">
+      </div>
+
+      <div class="input">
+        <label for="form-subject">Subject</label>
+        <input style="position: absolute; left: 125px" type="text" id="form-subject" name="webform[subject]">
+      </div>
+
+      <div class="input">
+        <label for="form-message">Message</label>
+        <textarea style="position: absolute; left: 125px" id="form-message" rows="6" cols="40" name="webform[message]"></textarea>
+      </div>
+
+      <br><br><br><br><br>
+      <br>Please don't forget to give me some way to get back in touch with you.<br>
+
+      <br><div class="submit">
+        <button class="btn btn-warning">Send Message</button>
+      </div>
+
+    </form>
+    <div class="modal-screen js-modal-close"></div>
+  </div>
+
+  <script>
+  $(function(){
+    $("body").on("click", ".js-modal-open", function(event){
+      event.preventDefault();
+      $(".modal").addClass("is-open");
+    });
+    $("body").on("click", ".js-modal-close", function(event){
+      event.preventDefault();
+      $(".modal").removeClass("is-open");
+    });
+  });
+  </script>
+
 </body>
 </html>

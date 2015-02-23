@@ -30,6 +30,7 @@ gem 'autoprefixer-rails'
 
 # gem 'icomoon-rails'
 gem "font-awesome-rails"
+gem 'arel', '6.0.0.beta2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -54,6 +55,7 @@ end
 group :development do
   # gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
