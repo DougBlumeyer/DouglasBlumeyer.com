@@ -1,5 +1,3 @@
-
-
 $(function() {
 
   $.Othoundsto = function(el) {
@@ -9,42 +7,18 @@ $(function() {
     this.ctx.strokeStyle="#fff";
     this.ctx.fillStyle="#eee";
     this.ctx.lineWidth = 1;
-    console.log("ffiX");
     this.drawSide();
-    // this.$el.on("mouseover", this.drawSide.bind(this));
   }
 
   $.Othoundsto.prototype.drawSide = function(curPos, prevPos) {
-    console.log("ffx");
     this.ctx.clearRect(0, 0, 400, 400);
-    // this.rotation = (this.rotation += 0.01) % (2 * Math.PI);
-
-     // Move registration point to the center of the canvas
-    //  this.ctx.translate(200, 200);
-
-  // Rotate 1 degree
-// this.ctx.rotate(this.rotation);
-    // this.ctx.rotate(0.01)
-
-  // Move registration point back to the top left corner of canvas
-    // this.ctx.translate(-200, -200);
-
     this.rotation *= -1;
     if (this.rotation < 0 ) {
       this.rotation -= 45;
     }
-    // else {
-    //   this.rotation += 45;
-    // }
-    console.log(this.rotation);
-
     this.$el.css("transform", "translate(-50%) rotate(" + this.rotation + "deg)")
-
     this.ctx.beginPath();
-
-
     this.ctx.moveTo(200, 150);
-
     this.ctx.lineTo(250, 100);
     this.ctx.lineTo(250, 150);
     this.ctx.lineTo(300, 150);
@@ -60,11 +34,8 @@ $(function() {
     this.ctx.lineTo(150, 150);
     this.ctx.lineTo(200, 150);
     this.ctx.closePath();
-
-      this.ctx.fill();
-
+    this.ctx.fill();
     this.ctx.stroke();
-    // setTimeout(this.drawSide.bind(this), 30);
     setTimeout(this.drawSide.bind(this), 3005)
   };
 
@@ -74,6 +45,5 @@ $(function() {
     });
   };
 
-  console.log("ffviii");
   $("#othoundsto-canvas").othoundsto();
 });

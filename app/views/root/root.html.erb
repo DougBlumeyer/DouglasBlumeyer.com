@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
 	<!-- Menu -->
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
+
 			<h1 class="logo"><a href="#home" class="smoothScroll">D.Blumeyer</a></h1>
-      <%#= fa_icon "camera-retro" %>
-      <!-- <span class="fa fa-camera-retro"></span> -->
-			<!-- <i class="icon-remove menu-close"></span></i> -->
+
 			<a href="#home" class="smoothScroll">Home</a>
 			<a href="#about" class="smoothScroll">About</a>
       <a href="#resume" class="smoothScroll">Résumé</a>
@@ -18,51 +16,56 @@
       <a href="#wip" class="smoothScroll">Works in Progress</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
 
-      <a href="https://github.com/DougBlumeyer" target="_blank"><i class="fa fa-github-square"></i></a>
-      <a href="https://linkedin.com/in/douglasblumeyer" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+      <a href="https://github.com/DougBlumeyer" target="_blank">
+        <i style="font-size: 26px" class="fa fa-github-square"></i>
+      </a>
+      <a href="https://linkedin.com/in/douglasblumeyer" target="_blank">
+        <i style="font-size: 26px" class="fa fa-linkedin-square"></i>
+      </a>
 
 		</div>
 
-		<!-- Menu button -->
-		<!-- <div id="menuToggle"><i class="glyphicon glyphicon-menu-hamburger"></i></span></div> -->
-    <!-- <i class="glyphicon glyphicon-plane"></i> -->
-    <!-- <div id="menuToggle"><i class="icon-bars"></i></span></div> -->
-    <!-- <div id="menuToggle"><%= fa_icon "bars" %></div> -->
     <div id="menuToggle"><i class="fa fa-bars"></i></div>
+
 	</nav>
-
-
 
 	<!-- ========== HEADER SECTION ========== -->
 	<section id="home" name="home"></section>
 	<div id="headerwrap">
 		<div class="container">
-			<div class="logo">
-        <%#= image_tag "logo.png"%>
-			</div>
+
 			<br>
 			<div class="row" id="splash">
-        <canvas id='othoundsto-canvas' height='400' width='400' style="position: absolute; left: 50%; top: -1px; transform: translate(-50%) rotate(0deg); opacity: 0.5; transition: transform 3s; transition-timing-function: ease-in-out"></canvas>
-        <canvas id='othoundsto-geo-canvas' height='400' width='400' style="position: absolute; left: 50%; top: -1px; transform: translate(-50%) rotate(0deg); opacity: 0.5; transition: transform 3s; transition-timing-function: ease-in-out"></canvas>
+
+        <canvas id='othoundsto-canvas' height='400' width='400'
+          style="position: absolute; left: 50%; top: -1px;
+                transform: translate(-50%) rotate(0deg);
+                opacity: 0.5; transition: transform 3s;
+                transition-timing-function: ease-in-out">
+        </canvas>
+        <canvas id='othoundsto-geo-canvas' height='400' width='400'
+          style="position: absolute; left: 50%; top: -1px;
+                transform: translate(-50%) rotate(0deg);
+                opacity: 0.5; transition: transform 3s;
+                transition-timing-function: ease-in-out">
+        </canvas>
+
         <br><br>  <br><br>  <br><br>  <br><br>
 				<h1>DOUGLAS BLUMEYER</h1>
 				<h3>web developer | VR creative | artist</h3>
 
-				<br>
-				<br>
-				<div class="col-md-6 col-md-offset-3">
+				<br><br>
+				<div class="col-md-6 col-md-offset-3"></div>
 
-				</div>
 			</div>
 		</div><!-- /container -->
 	</div><!-- /headerwrap -->
-
-
 
 	<!-- ========== ABOUT SECTION ========== -->
 	<section id="about" name="about"></section>
 	<div id="f3">
 		<div class="container">
+
       <br><br>
       <div class="row">
         <div class="col-md-6 col-md-offset-1">
@@ -72,19 +75,23 @@
 
       <br>
 			<div class="row">
-				<!-- <p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p> -->
         <div class="col-md-6 col-md-offset-1">
           <%= image_tag "good_one_small.jpg", width: "100%" %>
           <br><br>
         </div>
-				<!-- INTRO INFORMATIO-->
+				<!-- INTRO INFORMATION-->
 				<div class="col-md-3">
 					<p>I build inspiring web experiences.</p>
-					<p style="font-size: 13px">My passion is bridging the technical and aesthetic: finding the music in math, the code in poetry, and vice versa.</p>
-          <p style="font-size: 13px">I also have a thing for solving tough problems and teaching others how to approach them.</p>
-					<p style="font-size: 13px">I'm based in San Francisco, and available for full-time work.</p><br>
-					<!-- <p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p> -->
-          <p><button type="button" class="btn btn-warning js-modal-open">MESSAGE ME</button></p>
+					<p style="font-size: 13px">My passion is bridging the
+            technical and aesthetic: finding the music in math,
+            the code in poetry, and vice versa.</p>
+          <p style="font-size: 13px">I also have a thing for solving
+            tough problems and teaching others how to approach them.</p>
+					<p style="font-size: 13px">I'm based in San Francisco,
+            and available for full-time work.</p><br>
+          <p><button type="button" class="btn btn-warning js-modal-open">
+            MESSAGE ME
+          </button></p>
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -101,21 +108,25 @@
       </div>
       <div class="row">
         <div class="col-md-9 col-md-offset-1">
+
           <br>
-          <!-- <a href="assets/images/Douglas_Blumeyer_2015_resume.pdf" target="_blank"><i style="font-size: 36px; color: #f85c37" class="fa fa-file"></i></a> -->
-          <!-- <i style="font-size: 36px; color: #f85c37" class="fa fa-file"> -->
-            <!-- <%#= link_to "", "Douglas_Blumeyer_2015_resume.pdf", class: "fa fa-file" %> -->
-            <!-- <%#= link_to "", "#{image_tag 'Douglas_Blumeyer_2015_resume.pdf'}", class: "fa fa-file" %> -->
-            <!-- <%#= link_to "", "/assets/images/Douglas_Blumeyer_2015_resume.pdf", class: "fa fa-file" %> -->
-            <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file", style: "font-size: 36px" %>
-            <!-- </i> -->
+          <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file", style: "font-size: 36px" %>
+
           <br><br><h5 style="text-align: left">Education</h5>
-          <br><strong>Stanford University</strong> | '08 <span style="color: #f85c37">| BA Film & Media Studies</span>
+          <br><strong>Stanford University</strong> | '08
+            <span style="color: #f85c37">| BA Film & Media Studies</span>
           <br><br><h5 style="text-align: left">Work Experience</h5>
 
-          <br><strong>Contextucation</strong> | #1 rated WineGlass mobile app <span style="color: #f85c37">| 2014 | Objective-C Contractor</span>
-          <br><strong>Bloodhound</strong> | SF tech startup <span style="color: #f85c37">| 2012-2014 | Operations Manager</span>
-          <br><strong>VHIL</strong> | Stanford's virtual reality lab <span style="color: #f85c37">| 2005-2008 | Research Assistant & Graphic Designer</span>
+          <br><strong>Contextucation</strong> | #1 rated WineGlass mobile app
+            <span style="color: #f85c37">| 2014
+            | Objective-C Contractor</span>
+          <br><strong>Bloodhound</strong> | SF tech startup
+            <span style="color: #f85c37">| 2012-2014
+            | Operations Manager</span>
+          <br><strong>VHIL</strong> | Stanford's virtual reality lab
+            <span style="color: #f85c37">| 2005-2008
+            | Research Assistant & Graphic Designer</span>
+
         </div>
       </div>
     </div><!-- /container -->
@@ -139,8 +150,15 @@
         </div>
         <div class="col-md-3">
           <h5>Geometrhythm</h5></a><br>
-          <p>A tool I built largely for my own benefit as a musician. It allows one to manipulate a looping rhythm, represented visually as a ring of onset beats and rest beats, while it’s playing. And more importantly, data visualizations update dynamically as you mutate the rhythm, to give you feedback on various mathematical properties, so you can effectively optimize the rhythm to your musical needs.</p>
-          <span class="tools"><strong>tools used:</strong> Rails, Backbone.js, HTML5 Canvas, jQuery, jQuery UI </span>
+          <p>A tool I built largely for my own benefit as a musician.
+            It allows one to manipulate a looping rhythm, represented visually
+            as a ring of onset beats and rest beats, while it’s playing.
+            And more importantly, data visualizations update dynamically
+            as you mutate the rhythm, to give you feedback on various
+            mathematical properties, so you can effectively optimize
+            the rhythm to your musical needs.</p>
+          <span class="tools"><strong>tools used:</strong> Rails, Backbone.js,
+            HTML5 Canvas, jQuery, jQuery UI </span>
         </div>
       </div>
       <br><br>
@@ -152,8 +170,14 @@
         </div>
         <div class="col-md-3">
           <h5>Rainbowbbles</h5></a><br>
-          <p>I set out to create an open-ended play experience that engaged many senses together. The 'bowbbles pop into their constituent primary colors, sized to preserve the spectrum. And the pitch of their pop is tuned proportionaly by size to the musical mode. Pop obsessively, or sit back and let them merge into a super-'bowbble.</p>
-          <span class="tools"><strong>tools used:</strong> jQuery, HTML5 Canvas</span>
+          <p>I set out to create an open-ended play experience that engaged
+            many senses together. The 'bowbbles pop into their constituent
+            primary colors, sized to preserve the spectrum. And the pitch of
+            their pop is tuned proportionaly by size to the musical mode.
+            Pop obsessively, or sit back and let them merge into a
+            super-'bowbble.</p>
+          <span class="tools"><strong>tools used:</strong> jQuery,
+            HTML5 Canvas</span>
         </div>
       </div>
       <br><br>
@@ -165,7 +189,12 @@
         </div>
         <div class="col-md-3">
           <h5>RailsLite</h5></a><br>
-          <p>In a feat of metaprogramming I recreated the core functionality of ActiveRecord and ActionController, the base classes for Ruby on Rails Models and Controllers, respectively. With my lite version of Rails, you can create a basic website with associations, flash, and even auth. Not that I would recommend using my version over the real thing just yet.</p>
+          <p>In a feat of metaprogramming I recreated the core functionality
+            of ActiveRecord and ActionController, the base classes for
+            Ruby on Rails Models and Controllers, respectively.
+            With my lite version of Rails, you can create a basic website
+            with associations, flash, and even auth. Not that I would recommend
+            using my version over the real thing just yet.</p>
           <span class="tools"><strong>tools used:</strong> Ruby</span>
         </div>
       </div>
@@ -191,8 +220,13 @@
         </div>
         <div class="col-md-3">
           <h5>The Last Mountain</h5></a><br>
-          <p>The Last Mountain team formed at San Francisco's first VR Hackathon. We're working hard to create one of the world's very first animated virtual reality short films. I'm the assistant game engine guy - I work on lighting, camera, and editing on the VR side.</p>
-          <span class="tools"><strong>tools used:</strong> Unity3D game engine, Oculus Rift SDK</span>
+          <p>The Last Mountain team formed at San Francisco's first VR
+            Hackathon. We're working hard to create one of the world's very
+            first animated virtual reality short films. I'm the assistant
+            game engine guy - I work on lighting, camera, and editing on
+            the VR side.</p>
+          <span class="tools"><strong>tools used:</strong> Unity3D game engine,
+            Oculus Rift SDK</span>
         </div>
       </div>
       <br><br>
@@ -204,8 +238,12 @@
         </div>
         <div class="col-md-3">
           <h5>Binoculus</h5></a><br>
-          <p>Binoculus is a mobile game you can experience in VR simply by inserting your mobile device into a Google Cardboard, DODOcase, or GearVR. It's a hidden object puzzle adventure, taking advantage of the strenghts and limitations of present VR technology. </p>
-          <span class="tools"><strong>tools used:</strong> Unity3D game engine, Durovis Dive SDK</span>
+          <p>Binoculus is a mobile game you can experience in VR simply by
+            inserting your mobile device into a Google Cardboard, DODOcase,
+            or GearVR. It's a hidden object puzzle adventure, taking advantage
+            of the strenghts and limitations of present VR technology. </p>
+          <span class="tools"><strong>tools used:</strong> Unity3D game engine,
+            Durovis Dive SDK</span>
         </div>
       </div>
       <br><br>
@@ -217,7 +255,9 @@
         </div>
         <div class="col-md-3">
           <h5>Fun Musical Ideas</h5></a><br>
-          <p>A compendium of 26 experimental musical techniques I've discovered and am building tools for. Includes wrarp, reverge, unshadow, aharmonics, recursive Shepard-Risset Glissando, and more.</p>
+          <p>A compendium of 26 experimental musical techniques I've discovered
+            and am building tools for. Includes wrarp, reverge, unshadow,
+            aharmonics, recursive Shepard-Risset Glissando, and more.</p>
           <p>Latest draft here: <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank"><i style="font-size: 28px" class="fa fa-file"></i></a></p>
           <span class="tools"><strong>tools used:</strong> Max/MSP</span>
         </div>
@@ -235,15 +275,21 @@
 				<h3>CONTACT ME</h3>
 
 				<div class="col-md-6 col-md-offset-3">
-					<p>200 Dolores St. #12<br/>San Francisco, CA 94103<br/>847.922.1483</p>
-					<p>douglas.blumeyer@gmail.com</p>
-          <a href="https://github.com/DougBlumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-github-square"></i></a>
-          <a href="https://linkedin.com/in/douglasblumeyer" target="_blank"><i style="font-size: 28px" class="fa fa-linkedin-square"></i></a>
 
-          <br>
-          <br>
-					<!-- <p><button type="button" class="btn btn-warning" href="mailto:douglas.blumeyer@gmail.com">MESSAGE ME</button></p> -->
-          <p><button type="button" class="btn btn-warning js-modal-open">MESSAGE ME</button></p>
+					<p>200 Dolores St. #12<br>San Francisco, CA 94103<br>847.922.1483</p>
+					<p>douglas.blumeyer@gmail.com</p>
+
+          <a href="https://github.com/DougBlumeyer" target="_blank">
+            <i style="font-size: 28px" class="fa fa-github-square"></i>
+          </a>
+          <a href="https://linkedin.com/in/douglasblumeyer" target="_blank">
+            <i style="font-size: 28px" class="fa fa-linkedin-square"></i>
+          </a>
+
+          <br><br>
+          <p><button type="button" class="btn btn-warning js-modal-open">
+            MESSAGE ME
+          </button></p>
 
         </div>
 			</div>
@@ -254,14 +300,42 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-4">
-          <!-- <span style=""color: #f85c37; "text-align: left"> -->
-            <!-- <br><span style="font-size: 12px">for the extra-curious</span><br> -->
-            <a href="https://cmloegcmluin.wordpress.com" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-wordpress"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; dream blog; film reviews; linguistics</span><br>
-            <a href="https://vimeo.com/douglasblumeyer" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-vimeo-square"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; kickstarter trailers; talks on VR, xenharmonics, etc</span><br>
-            <a href="https://www.flickr.com/photos/cmloegcmluin/sets/" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-flickr"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; drawings of my fantasy world & its denizens</span><br>
-            <a href="https://soundcloud.com/shmlegshmlin" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-soundcloud"></i></a><span style="color: #f85c37">&nbsp; audio experiments; compositions from my past life</span><br>
-            <a href="https://twitter.com/dblumeyer" target="_blank"><i style="font-size: 18px; color: #eee" class="fa fa-twitter-square"></i></a><span style="color: #f85c37">&nbsp;&nbsp;&nbsp; silliness</span><br>
-          <!-- </span> -->
+
+            <a href="https://cmloegcmluin.wordpress.com" target="_blank">
+              <i style="font-size: 18px; color: #eee" class="fa fa-wordpress">
+              </i>
+            </a>
+            <span style="color: #f85c37">&nbsp;&nbsp;&nbsp;
+               dream blog; film reviews; linguistics</span><br>
+
+            <a href="https://vimeo.com/douglasblumeyer" target="_blank">
+              <i style="font-size: 18px; color: #eee" class="fa fa-vimeo-square">
+              </i>
+            </a>
+            <span style="color: #f85c37">&nbsp;&nbsp;&nbsp;
+              kickstarter trailers; talks on VR, xenharmonics, etc</span><br>
+
+            <a href="https://www.flickr.com/photos/cmloegcmluin/sets/" target="_blank">
+              <i style="font-size: 18px; color: #eee" class="fa fa-flickr">
+              </i>
+            </a>
+            <span style="color: #f85c37">&nbsp;&nbsp;&nbsp;
+              drawings of my fantasy world & its denizens</span><br>
+
+            <a href="https://soundcloud.com/shmlegshmlin" target="_blank">
+              <i style="font-size: 18px; color: #eee" class="fa fa-soundcloud">
+              </i>
+            </a>
+            <span style="color: #f85c37">&nbsp;
+              audio experiments; compositions from my past life</span><br>
+
+            <a href="https://twitter.com/dblumeyer" target="_blank">
+              <i style="font-size: 18px; color: #eee" class="fa fa-twitter-square">
+              </i>
+            </a>
+            <span style="color: #f85c37">&nbsp;&nbsp;&nbsp;
+              silliness</span><br>
+
         </div>
       </div>
     </div>
@@ -270,8 +344,6 @@
 
   <script>
     $('#menuToggle, .menu-close').on('click', function(){
-      // console.log("howdy pahdnah jajaja");
-      // debugger
       $('#menuToggle').toggleClass('active');
       $('body').toggleClass('body-push-toleft');
       $('#theMenu').toggleClass('menu-open');
@@ -279,33 +351,37 @@
   </script>
 
   <div class="modal">
-    <!-- <form class="modal-form" action="<%= webforms_url %>" method="POST"> -->
     <form class="modal-form">
-      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="hidden" name="authenticity_token"
+        value="<%= form_authenticity_token %>">
 
       <span class="modal-close js-modal-close">&times;</span>
 
       <h1>What's up?</h1>
 
-      <br>Would you like to work together on something? I'm looking forward to hearing from you.<br><br>
+      <br>Would you like to work together on something?
+      I'm looking forward to hearing from you.<br><br>
 
       <div class="input">
         <label for="form-visitor">Your Name</label>
-        <input style="position: absolute; left: 125px" type="text" id="form-visitor" name="webform[visitor]">
+        <input style="position: absolute; left: 125px" type="text"
+          id="form-visitor" name="webform[visitor]">
       </div>
 
       <div class="input">
         <label for="form-subject">Subject</label>
-        <input style="position: absolute; left: 125px" type="text" id="form-subject" name="webform[subject]">
+        <input style="position: absolute; left: 125px" type="text"
+          id="form-subject" name="webform[subject]">
       </div>
 
       <div class="input">
         <label for="form-message">Message</label>
-        <textarea style="position: absolute; left: 125px" id="form-message" rows="6" cols="40" name="webform[message]"></textarea>
+        <textarea style="position: absolute; left: 125px" id="form-message"
+          rows="6" cols="40" name="webform[message]"></textarea>
       </div>
 
-      <br><br><br><br><br>
-      <br>Please don't forget to give me some way to get back in touch with you.<br>
+      <br><br><br><br><br><br>
+      Please don't forget to give me some way to get back in touch with you.<br>
 
       <br><div class="submit">
         <button class="btn btn-warning">Send Message</button>
@@ -327,7 +403,6 @@
     });
   });
   </script>
-
 
 </body>
 </html>
