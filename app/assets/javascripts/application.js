@@ -14,4 +14,11 @@
 //= require jquery_ujs
 //= require jquery.serializejson.min
 //= require bootstrap-sprockets
+//= require othoundsto_song/canvas
+//= require othoundsto_song/keyboard
+//= require othoundsto_song/rotation
+//= require othoundsto_song/collision
+//= require othoundsto_song/audio
+//= require othoundsto_song/houndstooth
+//= require othoundsto_song/song
 //= require_tree .

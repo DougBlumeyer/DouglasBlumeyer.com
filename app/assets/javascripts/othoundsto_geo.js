@@ -51,6 +51,5 @@ $(function() {
     });
   };
 
-  console.log("ffviii");
   $("#othoundsto-geo-canvas").othoundstoGeo();
 });

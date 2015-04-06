@@ -1,6 +1,6 @@
 # DouglasBlumeyer.com
 
-This is a basic Rails app I build, powering my personal homepage.
+This is a basic Rails app I built, powering my personal homepage.
 
 Nothing fancy:
 * jQuery animation for my logo
