@@ -13,12 +13,12 @@ onkeyup = function(e) {
 onkeydown = function(e) {
   key[e.keyCode] = true;
   if (songStarted == false) {
-    songLoop();
+    Othoundsto.songLoop();
     songStarted = true;
   }
 }
 
-function manualControls() {
+Othoundsto.manualControls = function() {
   if(key[38]) { rotation -= 0.001 };
   if(key[40]) { rotation += 0.001 };
   if(key[37]) {

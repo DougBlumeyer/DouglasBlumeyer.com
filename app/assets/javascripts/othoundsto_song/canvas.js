@@ -66,6 +66,4 @@ Othoundsto.renderHoundsteeth = function (radians, progress) {
   }
 }
 
-Othoundsto.drawPlayCursor();
-
 });
