@@ -12,7 +12,7 @@ onkeyup = function(e) {
 
 onkeydown = function(e) {
   key[e.keyCode] = true;
-  if (songStarted == false) {
+  if (songStarted == false && canvas) {
     Othoundsto.songLoop();
     songStarted = true;
   }

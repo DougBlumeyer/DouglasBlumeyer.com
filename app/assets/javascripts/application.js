@@ -21,4 +21,8 @@
 //= require othoundsto_song/audio
 //= require othoundsto_song/houndstooth
 //= require othoundsto_song/song
+//= require dougstooth/three.min
+//= require dougstooth/OrbitControls
+//= require dougstooth/OBJLoader
+//= require dougstooth/dougstooth
 //= require_tree .

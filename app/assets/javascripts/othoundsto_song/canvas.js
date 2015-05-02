@@ -12,10 +12,13 @@ WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;
 
 canvas = document.querySelector('.canvas');
-ctx = canvas.getContext('2d');
+if (canvas) {
+  ctx = canvas.getContext('2d');
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+}
 
-canvas.width = WIDTH;
-canvas.height = HEIGHT;
+
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
