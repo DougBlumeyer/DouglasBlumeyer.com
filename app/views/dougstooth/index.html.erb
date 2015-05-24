@@ -1,11 +1,13 @@
-<html>
-	<head>
-		<title>Dougstooth</title>
-		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-		</style>
-	</head>
-	<body>
-	</body>
-</html>
+<head>
+	<title>Dougstooth</title>
+	<style>
+		body { margin: 0; }
+		canvas { width: 100%; height: 100% }
+	</style>
+</head>
+<body>
+	<%= javascript_include_tag "dougstooth/OrbitControls" %>
+	<%= javascript_include_tag "dougstooth/OBJLoader" %>
+	<script> iHateYou = '<%= asset_path 'jhgjh.unity_55.obj' %>';	</script>
+	<%= javascript_include_tag "dougstooth/dougstooth" %>
+</body>
