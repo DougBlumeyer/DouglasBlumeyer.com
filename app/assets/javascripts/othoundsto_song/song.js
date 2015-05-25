@@ -51,7 +51,7 @@ function rotationProgresses() {
 };
 
 Othoundsto.songLoop = function() {
-  Othoundsto.manualControls();
+  // Othoundsto.manualControls();
   playCursorProgresses();
   rotationProgresses();
   Othoundsto.tileHoundsteeth(rotation, progress);
@@ -59,6 +59,6 @@ Othoundsto.songLoop = function() {
   setTimeout(Othoundsto.songLoop, SPEED);
 };
 
-// Othoundsto.songLoop();
+Othoundsto.songLoop();
 
 });

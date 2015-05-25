@@ -3,9 +3,13 @@ $(function() {
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-var renderer = new THREE.WebGLRenderer({alpha: true});
-renderer.setClearColor( 0xffffff, 1);
-renderer.setSize( window.innerWidth, window.innerHeight );
+// var c = $("#myCanvas");
+var renderer = new THREE.WebGLRenderer({canvas: myCanvas, alpha: true});
+renderer.setSize(800, 400);
+
+// var renderer = new THREE.WebGLRenderer({alpha: true});
+// renderer.setClearColor( 0xffffff, 0);
+// renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.shadowMapEnabled = true;
 
 renderer.shadowCameraNear = 3;
@@ -16,7 +20,7 @@ renderer.shadowMapBias = 0.0039;
 renderer.shadowMapDarkness = 0.5;
 renderer.shadowMapWidth = 1024;
 renderer.shadowMapHeight = 1024;
-document.body.appendChild( renderer.domElement );
+// document.body.appendChild( renderer.domElement );
 
 
 var texture = new THREE.Texture();

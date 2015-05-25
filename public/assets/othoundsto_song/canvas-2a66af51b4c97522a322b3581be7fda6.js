@@ -4,12 +4,14 @@ $(function() {
     window.Othoundsto = {};
   }
 
-SCALE = 18;
+
 
 playCursor = [[20,10],[20,30]];
 
 WIDTH = window.innerWidth;
 HEIGHT = window.innerHeight;
+
+SCALE = WIDTH / 75;
 
 canvas = document.querySelector('.canvas');
 if (canvas) {

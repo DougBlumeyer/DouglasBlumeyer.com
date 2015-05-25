@@ -10521,8 +10521,27 @@ hr {
    Wrap Sections
    ========================================================================== */
 /* line 76, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+.background-fractal {
+  z-index: -3;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+/* line 84, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+.img_lnk img {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  position: inline;
+}
+
+/* line 91, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #headerwrap {
-  background-image: url(/assets/spiral_smaller-tiltshift-grey-db2e9ad1035d3676e39422c5e7dd64f8.jpg);
+  background-image: url(/assets/thousoondth - final-937c5a164e51c232a578409f902f27ae.png);
   margin-top: -10px;
   padding-top: 20px;
   text-align: center;
@@ -10535,7 +10554,7 @@ hr {
   background-size: contain;
 }
 
-/* line 90, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 105, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #headerwrap h1 {
   margin-top: 150px;
   color: #eeeeee;
@@ -10543,7 +10562,7 @@ hr {
   font-weight: 700;
 }
 
-/* line 97, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 112, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #headerwrap h3 {
   color: #eeeeee;
   font-size: 24px;
@@ -10551,7 +10570,7 @@ hr {
   font-family: 'Maven Pro', serif;
 }
 
-/* line 104, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 119, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #headerwrap .logo {
   text-align: left;
   margin-left: 20px;
@@ -10559,14 +10578,14 @@ hr {
 }
 
 /* Footer Wrap */
-/* line 114, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 129, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f {
   background: #202020;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-/* line 120, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 135, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f2 {
   background: #202020;
   padding-top: 70px;
@@ -10574,7 +10593,7 @@ hr {
   text-align: center;
 }
 
-/* line 127, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 142, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f h3 {
   color: #eeeeee;
   font-size: 28px;
@@ -10582,7 +10601,7 @@ hr {
   letter-spacing: 1px;
 }
 
-/* line 134, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 149, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f h5 {
   color: #eeeeee;
   font-size: 22px;
@@ -10591,7 +10610,7 @@ hr {
   text-align: center;
 }
 
-/* line 142, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 157, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f2 h3 {
   color: #eeeeee;
   font-size: 28px;
@@ -10599,7 +10618,7 @@ hr {
   letter-spacing: 1px;
 }
 
-/* line 149, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 164, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f3 h3 {
   color: #eeeeee;
   font-size: 28px;
@@ -10607,21 +10626,21 @@ hr {
   letter-spacing: 1px;
 }
 
-/* line 157, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 172, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f i {
   font-size: 8px;
   color: #fff;
   padding: 3px;
 }
 
-/* line 163, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 178, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f2 i {
   font-size: 8px;
   color: #fff;
   padding: 3px;
 }
 
-/* line 169, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 184, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f p {
   font-size: 13px;
   color: #ddd;
@@ -10629,7 +10648,7 @@ hr {
   font-family: Maven Pro;
 }
 
-/* line 176, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 191, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f2 p {
   font-size: 16px;
   color: #ddd;
@@ -10637,7 +10656,7 @@ hr {
   font-family: Maven Pro;
 }
 
-/* line 183, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 198, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f3 p {
   font-size: 16px;
   color: #ddd;
@@ -10645,13 +10664,13 @@ hr {
   font-family: Maven Pro;
 }
 
-/* line 190, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 205, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #f img {
   text-align: center;
 }
 
 /* MENU CONF*/
-/* line 197, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 212, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu {
   position: fixed;
   right: -200px;
@@ -10662,12 +10681,12 @@ hr {
   text-align: left;
 }
 
-/* line 207, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 222, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu.menu-open {
   right: 0px;
 }
 
-/* line 211, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 226, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu-wrap {
   position: absolute;
   top: 0;
@@ -10677,7 +10696,7 @@ hr {
   height: 100%;
 }
 
-/* line 220, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 235, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu h1.logo a {
   font-family: 'Maven Pro', sans-serif;
   font-size: 16px;
@@ -10689,18 +10708,18 @@ hr {
   margin-top: 20px;
 }
 
-/* line 231, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 246, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu h1.logo a:hover {
   color: #f85c37;
 }
 
-/* line 235, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 250, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu img.logo {
   margin: 20px 0;
   max-width: 160px;
 }
 
-/* line 240, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 255, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu a {
   margin-left: 20px;
   color: #808080;
@@ -10712,17 +10731,17 @@ hr {
   text-transform: uppercase;
 }
 
-/* line 251, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 266, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu a:hover {
   color: #ffffff;
 }
 
-/* line 255, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 270, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu a:active {
   color: #ffffff;
 }
 
-/* line 259, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 274, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu a > i {
   float: left;
   display: inline-block;
@@ -10734,7 +10753,7 @@ hr {
   margin: 25px 2px;
 }
 
-/* line 270, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 285, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu-close {
   cursor: pointer;
   display: block;
@@ -10750,7 +10769,7 @@ hr {
   transition: all .1s ease-in-out;
 }
 
-/* line 288, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 303, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu-close:hover {
   color: #ffffff;
   -webkit-transition: all .1s ease-in-out;
@@ -10758,31 +10777,31 @@ hr {
 }
 
 /* Push the body after clicking the menu button */
-/* line 298, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 313, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .body-push {
   overflow-x: hidden;
   position: relative;
   left: 0;
 }
 
-/* line 304, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 319, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .body-push-toright {
   left: 200px;
 }
 
-/* line 308, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 323, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .body-push-toleft {
   left: -200px;
 }
 
-/* line 312, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 327, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 .menu,
 .body-push {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-/* line 321, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 336, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #menuToggle {
   position: absolute;
   top: 20px;
@@ -10801,7 +10820,7 @@ hr {
   transition: all .1s ease-in-out;
 }
 
-/* line 342, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
+/* line 357, /home/douglas/Desktop/douglasblumeyer/app/assets/stylesheets/main.css.scss */
 #menuToggle:hover {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.2);

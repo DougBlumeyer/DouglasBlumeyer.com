@@ -3,6 +3,8 @@
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
+
+
 	<!-- Menuuuuu -->
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
@@ -39,27 +41,14 @@
 			<br>
 			<div class="row" id="splash">
 
-        <!-- <canvas class="canvas"></canvas>
+        <canvas id="myCanvas" height='400' width='800'></canvas>
+        <%= javascript_include_tag "dougstooth/OrbitControls" %>
+        <%= javascript_include_tag "dougstooth/OBJLoader" %>
+        <script> iHateYou = '<%= asset_path 'jhgjh.unity_55.obj' %>';	</script>
+        <%= javascript_include_tag "dougstooth/dougstooth" %>
 
-        <%#= link_to othoundsto_index_url, id: "o" do %>
-          <canvas id='othoundsto-canvas' height='400' width='400'
-            style="position: absolute; left: 50%; top: -1px;
-                  transform: translate(-50%) rotate(0deg);
-                  opacity: 0.5; transition: transform 3s;
-                  transition-timing-function: ease-in-out">
-          </canvas>
-          <canvas id='othoundsto-geo-canvas' height='400' width='400'
-            style="position: absolute; left: 50%; top: -1px;
-                  transform: translate(-50%) rotate(0deg);
-                  opacity: 0.5; transition: transform 3s;
-                  transition-timing-function: ease-in-out">
-          </canvas>
-        <%# end %> -->
-
-        <br><br>  <br><br>  <br><br>  <br><br>
 				<h1>DOUGLAS BLUMEYER</h1>
 				<h3>web developer | VR creative | artist</h3>
-
 
 				<br><br>
 				<div class="col-md-6 col-md-offset-3"></div>
@@ -351,7 +340,25 @@
         </div>
       </div>
     </div>
+
+
+
   </div>
+
+  <div id="f3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <!-- <ul> -->
+            <%= link_to image_tag("Dougstooth.png"), dougstooth_index_path, class: "img_lnk" %>
+            <%= link_to image_tag("othoundsto_screenshot.png"), othoundsto_index_path, class: "img_lnk" %>
+            <%= link_to image_tag("thousoondth - final.png"), thousoondth_index_path, class: "img_lnk" %>
+          <!-- </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <br><br><br><br>
 
   <script>

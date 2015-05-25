@@ -7,8 +7,8 @@ $(function() {
 BASE_PITCH = 100; //in Hz
 
 maxFreq = 6000;
-maxVol = 0.02;
-initialVol = 0.001;
+maxVol = 1.0;
+initialVol = 0.05;
 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 Othoundsto.updateVoice = function(collision, yValOfCollision, proximityToLineSegmentEndpoint) {

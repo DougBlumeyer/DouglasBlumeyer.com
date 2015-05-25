@@ -73,8 +73,23 @@ a:after {
    Wrap Sections
    ========================================================================== */
 
+.background-fractal {
+  z-index: -3;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  transform: translate(-50%);
+}
+
+.img_lnk img {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  position: inline;
+}
+
 #headerwrap {
-  background-image: image-url("spiral_smaller-tiltshift-grey.jpg");
+  background-image: image-url("thousoondth - final.png");
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
