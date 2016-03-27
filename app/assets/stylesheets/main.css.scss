@@ -1,4 +1,92 @@
-body {
+.the-container {
+  margin-top: 20px;
+  width: 80vw;
+  margin: auto;
+}
+
+.a-row {
+  border: 1px solid red;
+  display: flex;
+
+  div {
+    border: 1px solid blue;
+  }
+}
+
+.name-row {
+  height: 6vh;
+}
+
+.info-row {
+  height: 6vh;
+
+  .info {
+    flex: 5;
+  }
+
+  .photo {
+    flex: 4;
+  }
+}
+
+.code-links-row {
+  height: 5vh;
+
+  .cv, .gh, .li, .rb, .dt {
+    flex: 1;
+  }
+}
+
+.code-row {
+  height: 8vh;
+
+  .code {
+    flex: 1;
+  }
+
+  .why {
+    flex: 0;
+  }
+}
+
+.music-links-row {
+  height: 7vh;
+
+  .demos {
+    flex: 2;
+  }
+
+  .sc, .gr {
+    flex: 1;
+  }
+}
+
+.vr-music-row {
+  height: 7vh;
+
+  .vr {
+    flex: 1;
+  }
+
+  .music {
+    flex: 2;
+  }
+}
+
+.misc-row {
+  height: 6vh;
+
+  .film, .vm, .blog {
+    flex: 1;
+  }
+
+  .words, .fmi {
+    flex: 2;
+  }
+}
+
+
+/*body {
   background-color: #202020;
     font-family: 'Maven Pro', serif;
     font-weight: 300;
@@ -69,17 +157,14 @@ a:after {
 }
 
 
-/* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
 
-.background-fractal {
-  z-index: -3;
-  position: absolute;
-  width: 50%;
-  text-align: center;
-  transform: translate(-50%);
-}
+// .background-fractal {
+//   z-index: -3;
+//   position: absolute;
+//   width: 50%;
+//   text-align: center;
+//   transform: translate(-50%);
+// }
 
 .img_lnk img {
   width: 100px;
@@ -88,43 +173,40 @@ a:after {
   position: inline;
 }
 
-#headerwrap {
-  background-image: image-url("thousoondth - final.png");
-	margin-top: -10px;
-	padding-top:20px;
-	text-align:center;
-	background-attachment: relative;
-  background-repeat: no-repeat;
-	background-position: center center;
-	min-height: 700px;
-	width: 100%;
-  background-size: 100%;
-  background-size: contain;
-}
+// #headerwrap {
+//   background-image: image-url("thousoondth - final.png");
+// 	margin-top: -10px;
+// 	padding-top:20px;
+// 	text-align:center;
+// 	background-attachment: relative;
+//   background-repeat: no-repeat;
+// 	background-position: center center;
+// 	min-height: 700px;
+// 	width: 100%;
+//   background-size: 100%;
+//   background-size: contain;
+// }
 
-#headerwrap h1 {
-	margin-top: 150px;
+h1 {
 	color: #eeeeee;
 	font-size: 70px;
 	font-weight: 700;
 }
 
-#headerwrap h3 {
+h3 {
 	color: #eeeeee;
 	font-size: 24px;
 	font-weight: 100;
   font-family: 'Maven Pro', serif;
 }
+//
+// #headerwrap .logo {
+// 	text-align: left;
+// 	margin-left: 20px;
+// 	margin-top: 15px;
+// }
 
-#headerwrap .logo {
-	text-align: left;
-	margin-left: 20px;
-	margin-top: 15px;
-}
 
-
-/* Footer Wrap */
-//Yes, I know this section is messy...
 
 #f {
 	background: #202020;
@@ -207,7 +289,6 @@ a:after {
 }
 
 
-/* MENU CONF*/
 
 .menu {
 	position: fixed;
@@ -232,20 +313,21 @@ a:after {
 	height: 100%;
 }
 
-.menu h1.logo a {
-  font-family: 'Maven Pro', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0.15em;
-	line-height: 40px;
-	text-transform: uppercase;
-	color: #dddddd;
-	margin-top: 20px;
-}
+// .menu h1.logo a {
+// h1 {
+//   font-family: 'Maven Pro', sans-serif;
+// 	font-size: 16px;
+// 	font-weight: 700;
+// 	letter-spacing: 0.15em;
+// 	line-height: 40px;
+// 	text-transform: uppercase;
+// 	color: #dddddd;
+// 	margin-top: 20px;
+// }
 
-.menu h1.logo a:hover {
-	color: #f85c37;
-}
+// .menu h1.logo a:hover {
+// 	color: #f85c37;
+// }
 
 .menu img.logo {
 	margin: 20px 0;
@@ -309,7 +391,6 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
-/* Push the body after clicking the menu button */
 .body-push {
 	overflow-x: hidden;
 	position: relative;
@@ -363,3 +444,5 @@ a:after {
 		 -o-transition: all .1s ease-in-out;
 			transition: all .1s ease-in-out;
 }
+
+*/
