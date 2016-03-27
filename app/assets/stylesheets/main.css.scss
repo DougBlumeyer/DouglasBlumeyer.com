@@ -1,27 +1,127 @@
+//n    1  2  3  4  5  6   7   8   9  10  11   12   13   14   15   16
+$fib: (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987);
+
+$container-width-percentage: nth($fib, 11);
+$container-height-percentage-of-width: nth($fib, 12);
+
+$max-width: 1px * nth($fib, 15);
+$max-height: 1px * nth($fib, 16);
+
+$min-width: 1px * nth($fib, 13);
+$min-height: 1px * nth($fib, 14);
+
+$width-of-screen-when-things-stop-scaling-smaller: $min-width * 100 / $container-width-percentage;
+$width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-width-percentage;
+
+a {
+  color: #eee !important;
+}
+
 .the-container {
-  margin-top: 20px;
-  width: 80vw;
-  margin: auto;
+  width: 1vw * $container-width-percentage;
+  height: 1vw * $container-height-percentage-of-width;
+
+  max-width: $max-width;
+  max-height: $max-height;
+
+  min-width: $min-width;
+  min-height: $min-height;
+
+  margin-top: 1px * nth($fib, 8);
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Oswald', sans-serif;
+  color: #ddd;
+  font-weight: 300;
 }
 
 .a-row {
-  border: 1px solid red;
+  // border: 1px solid #ccc;
   display: flex;
+  align-items: center;
+}
 
-  div {
-    border: 1px solid blue;
+.row-section {
+  text-align: center;
+  // border: 1px solid #555;
+}
+
+canvas {
+  width: 20vw;
+  height: 20vw;
+}
+
+.category {
+  font-size: 10vw;
+  line-height: 10vw;
+  height: 10vw;
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    font-size: 26px;
+    line-height: 26px;
+    height: 26px;
+  }
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    font-size: 70px;
+    line-height: 70px;
+    height: 70px;
   }
 }
 
 .name-row {
-  height: 6vh;
+  flex: 6;
+
+  .name {
+    flex: 1;
+
+    font-weight: 700;
+    color: #eee;
+    text-align: center;
+
+    font-size: 10vw;
+    line-height: 10vw;
+    height: 10vw;
+    @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+      font-size: 26px;
+      line-height: 26px;
+      height: 26px;
+    }
+    @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+      font-size: 70px;
+      line-height: 70px;
+      height: 70px;
+    }
+  }
 }
 
 .info-row {
-  height: 6vh;
+  flex: 9;
 
   .info {
     flex: 5;
+    text-align: center;
+
+    .info-text {
+      display: inline-block;
+      text-align: left;
+
+      font-size: 5vw;
+      line-height: 5vw;
+      height: 15vw;
+      @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+        font-size: 13px;
+        line-height: 13px;
+        height: 39px;
+      }
+      @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+        font-size: 35px;
+        line-height: 35px;
+        height: 105px;
+      }
+    }
   }
 
   .photo {
@@ -30,17 +130,46 @@
 }
 
 .code-links-row {
-  height: 5vh;
+  flex: 5;
 
   .cv, .gh, .li, .rb, .dt {
     flex: 1;
   }
+
+  .dt-wrapper {
+    display: inline-block;
+    width: 10vw;
+    @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+      width: 26px;
+    }
+    @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+      width: 70px;
+    }
+
+    .dt-text {
+      height: 10vw;
+      width: 5vw;
+      border-radius: 0 10vw 10vw 0;
+      float: right;
+      @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+        height: 26px;
+        width: 13px;
+        border-radius: 0 26px 26px 0;
+      }
+      @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+        height: 70px;
+        width: 35px;
+        border-radius: 0 70px 70px 0;
+      }
+      background: #eee;
+    }
+  }
 }
 
 .code-row {
-  height: 8vh;
+  flex: 8;
 
-  .code {
+  .code { //b
     flex: 1;
   }
 
@@ -50,7 +179,7 @@
 }
 
 .music-links-row {
-  height: 7vh;
+  flex: 7;
 
   .demos {
     flex: 2;
@@ -62,26 +191,49 @@
 }
 
 .vr-music-row {
-  height: 7vh;
+  flex: 7;
 
-  .vr {
+  .vr { //u
     flex: 1;
   }
 
-  .music {
+  .music { //w
     flex: 2;
   }
 }
 
 .misc-row {
-  height: 6vh;
+  flex: 6;
 
-  .film, .vm, .blog {
+  .film, .vm, .blog { //g
     flex: 1;
   }
 
-  .words, .fmi {
+  .words, .fmi { //r
     flex: 2;
+  }
+
+  .film-text {
+position: absolute;
+    transform: rotate(270deg);
+  	// transform-origin: left top 0;
+    // float: left;
+  }
+}
+
+.fa {
+  font-size: 10vw;
+  line-height: 10vw;
+  height: 10vw;
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    font-size: 26px;
+    line-height: 26px;
+    height: 26px;
+  }
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    font-size: 70px;
+    line-height: 70px;
+    height: 70px;
   }
 }
 

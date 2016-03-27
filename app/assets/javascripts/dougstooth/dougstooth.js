@@ -1,11 +1,11 @@
 $(function() {
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 1, 10000 );
 
 // var c = $("#myCanvas");
 var renderer = new THREE.WebGLRenderer({canvas: myCanvas, alpha: true});
-renderer.setSize(800, 400);
+// renderer.setSize(800, 400);
 
 // var renderer = new THREE.WebGLRenderer({alpha: true});
 // renderer.setClearColor( 0xffffff, 0);
