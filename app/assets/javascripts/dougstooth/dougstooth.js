@@ -51,7 +51,7 @@ scene.add( spotLight );
 
 camera.position.z = 5;
 
-controls = new THREE.OrbitControls( camera );
+controls = new THREE.OrbitControls( camera , renderer.domElement);
 controls.damping = 0.2;
 
 var manager = new THREE.LoadingManager();
