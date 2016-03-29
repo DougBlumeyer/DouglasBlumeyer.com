@@ -17,6 +17,10 @@ a {
   color: #eee !important;
 }
 
+body {
+  background-color: #202020;
+}
+
 .the-container {
   width: 1vw * $container-width-percentage;
   height: 1vw * $container-height-percentage-of-width;
