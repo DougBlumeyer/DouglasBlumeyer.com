@@ -22,8 +22,8 @@ body {
 }
 
 .the-container {
-  width: 1vw * $container-width-percentage;
-  height: 1vw * $container-height-percentage-of-width;
+  width: 1.11% * $container-width-percentage;
+  height: 1.11% * $container-height-percentage-of-width;
 
   max-width: $max-width;
   max-height: $max-height;
@@ -57,6 +57,14 @@ body {
 canvas {
   width: 20vw;
   height: 20vw;
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    width: 52px;
+    height: 52px;
+  }
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 .category {
