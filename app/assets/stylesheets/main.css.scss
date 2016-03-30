@@ -47,14 +47,6 @@ body {
 //   max-width: 100% !important;
 // }
 
-iframe, frame, frameset {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%  !important;
-    height: 100% !important;
-}
-
 .the-container {
   width: 1vw * $container-width-percentage;
   height: 1vw * $container-height-percentage-of-width;
