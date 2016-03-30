@@ -22,8 +22,8 @@ body {
 }
 
 .the-container {
-  width: 1.11% * $container-width-percentage;
-  height: 1.11% * $container-height-percentage-of-width;
+  width: 100vw;//1vw * $container-width-percentage;
+  height: 1vw * $container-height-percentage-of-width;
 
   max-width: $max-width;
   max-height: $max-height;
