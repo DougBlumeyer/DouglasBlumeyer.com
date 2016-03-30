@@ -39,6 +39,10 @@ html {
   overflow: auto;
 }
 
+iframe, object, embed {
+        max-width: 100%;
+}
+
 .the-container {
   width: 1vw * $container-width-percentage;
   height: 1vw * $container-height-percentage-of-width;
