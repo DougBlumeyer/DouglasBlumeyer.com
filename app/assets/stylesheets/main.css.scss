@@ -25,8 +25,8 @@ body {
   width: 1vw * $container-width-percentage;
   height: 1vw * $container-height-percentage-of-width;
 
-  // max-width: $max-width;
-  // max-height: $max-height;
+  max-width: $max-width;
+  max-height: $max-height;
 
   min-width: $min-width;
   min-height: $min-height;
