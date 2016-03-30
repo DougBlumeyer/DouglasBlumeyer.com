@@ -17,30 +17,34 @@ a {
   color: #eee !important;
 }
 
-iframe {
-  border: 0;
-  position: fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%
-}
+// iframe {
+//   border: 0;
+//   position: fixed;
+//   top:0;
+//   left:0;
+//   right:0;
+//   bottom:0;
+//   width:100%;
+//   height:100%
+// }
+//
+// body {
+//   background-color: #202020;
+//   height: 100%;
+//   overflow: auto;
+// }
+//
+// html {
+//   height: 100%;
+//   overflow: auto;
+// }
+//
+// iframe, object, embed {
+//         max-width: 100%;
+// }
 
-body {
-  background-color: #202020;
-  height: 100%;
-  overflow: auto;
-}
-
-html {
-  height: 100%;
-  overflow: auto;
-}
-
-iframe, object, embed {
-        max-width: 100%;
+frame {
+  max-width: 100% !important;
 }
 
 .the-container {
