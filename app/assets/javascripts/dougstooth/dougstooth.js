@@ -14,7 +14,7 @@ $(function() {
     'z-index': '999999 !important',
     position: 'fixed !important',
     display: 'block !important',
-    line-height: '0 !important'
+    'line-height': '0 !important'
   });
   $('frame').css({
     top: '0px !important',
@@ -30,7 +30,7 @@ $(function() {
     'z-index': '999999 !important',
     position: 'fixed !important',
     display: 'block !important',
-    line-height: '0 !important'
+    'line-height': '0 !important'
   });
   $('frameset').css({
     top: '0px !important',
@@ -46,7 +46,7 @@ $(function() {
     'z-index': '999999 !important',
     position: 'fixed !important',
     display: 'block !important',
-    line-height: '0 !important'
+    'line-height': '0 !important'
   });
 
 
