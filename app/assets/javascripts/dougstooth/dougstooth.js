@@ -1,5 +1,57 @@
 $(function() {
 
+  $('iframe').css({
+    top: '0px !important',
+    left: '0px !important',
+    bottom: '0px !important',
+    right: '0px !important',
+    width: '100%  !important',
+    height: '100% !important',
+    border: 'none !important',
+    margin: '0 !important',
+    padding: '0 !important',
+    overflow: 'hidden !important',
+    'z-index': '999999 !important',
+    position: 'fixed !important',
+    display: 'block !important',
+    line-height: '0 !important'
+  });
+  $('frame').css({
+    top: '0px !important',
+    left: '0px !important',
+    bottom: '0px !important',
+    right: '0px !important',
+    width: '100%  !important',
+    height: '100% !important',
+    border: 'none !important',
+    margin: '0 !important',
+    padding: '0 !important',
+    overflow: 'hidden !important',
+    'z-index': '999999 !important',
+    position: 'fixed !important',
+    display: 'block !important',
+    line-height: '0 !important'
+  });
+  $('frameset').css({
+    top: '0px !important',
+    left: '0px !important',
+    bottom: '0px !important',
+    right: '0px !important',
+    width: '100%  !important',
+    height: '100% !important',
+    border: 'none !important',
+    margin: '0 !important',
+    padding: '0 !important',
+    overflow: 'hidden !important',
+    'z-index': '999999 !important',
+    position: 'fixed !important',
+    display: 'block !important',
+    line-height: '0 !important'
+  });
+
+
+VM4883:2 Uncaught TypeError: $(...).css is not a function(…)(anonymous function) @ VM4883:2InjectedScript._evaluateOn @ (program):878InjectedScript._evaluateAndWrap @ (program):811InjectedScript.evaluate @ (program):667
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 1, 10000 );
 
