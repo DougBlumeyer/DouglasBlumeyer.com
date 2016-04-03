@@ -1,6 +1,6 @@
-$background-grey: #222;
-$section-hovered: #888;
-$hovered:         #ddd;
+$background-grey: #222; // 32 32 32
+$section-hovered: #888; // 136 136 136
+$hovered:         #ddd; // 221 221 221
 
 $red-for-me:      #B52D0B;
 $orange-for-code: #AF5A05; //derived by a 50/50 blend bt background-grey and CC6600
@@ -12,4 +12,32 @@ $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFC
 @mixin unselectable_section_colors($color) {
   color: $color;
   background-color: mix($background-grey, $color, $inv-phi-percent);
+}
+
+@mixin hover_color {
+  &:hover {
+    color: $hovered;
+
+    g {
+      fill: $hovered;
+    }
+  }
+
+  &.section-hovered {
+    color: $section-hovered;
+
+    g {
+      fill: $section-hovered;
+    }
+  }
+}
+
+@mixin hover_color_drempt {
+  &:hover {
+    background-color: $hovered;
+  }
+
+  &.section-hovered {
+    background-color: $section-hovered;
+  }
 }

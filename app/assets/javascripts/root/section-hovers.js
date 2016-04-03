@@ -1,7 +1,6 @@
 $(function() {
 
 $('.code').mouseover(function() {
-  console.log('HEY')
   $('.code-category').addClass('section-hovered');
 });
 

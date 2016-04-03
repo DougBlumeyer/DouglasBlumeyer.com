@@ -1,9 +1,17 @@
 body {
   background-color: $background-grey;
   color: $background-grey;
+
   a {
     color: $background-grey;
+    transition: color 0.3s;
     text-decoration: none;
+
+    @include hover-color;
+  }
+
+  g {
+    fill: $background-grey;
   }
 
   font-family: 'Oswald', sans-serif;
@@ -51,15 +59,6 @@ canvas {
 
   .cv, .li, .gh, .rb, .dt {
     flex: 1;
-    a {
-      transition: color 0.5s;
-      &:hover {
-        color: $hovered;
-      }
-      &.section-hovered {
-        color: $section-hovered;
-      }
-    }
   }
 
   .cv, .li {
@@ -77,6 +76,7 @@ canvas {
       float: right;
       background: $background-grey;
       @include scalable_drempt_extras(10);
+      @include hover_color_drempt;
     }
   }
 }
