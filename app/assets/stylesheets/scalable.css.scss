@@ -1,0 +1,44 @@
+@mixin scalable_w_limits($size) {
+  font-size: 1vw * $size;
+  line-height: 1vw * $size;
+  height: 1vw * $size;
+
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    font-size: 2.6px * $size;
+    line-height: 2.6px * $size;
+    height: 2.6px * $size;
+  }
+
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    font-size: 7px * $size;
+    line-height: 7px * $size;
+    height: 7px * $size;
+  }
+}
+
+@mixin scalable_drempt_extras($size) {
+  @include scalable_w_limits($size);
+
+  width: 0.5vw * $size;
+  border-radius: 0 1vw*$size 1vw*$size 0;
+
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    width: 1.3px * $size;
+    border-radius: 0 2.6px*$size 2.6px*$size 0;
+  }
+
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    width: 3.5px * $size;
+    border-radius: 0 7px*$size 7px*$size 0;
+  }
+}
+
+@mixin scalable_drempt_wrapper($size) {
+  width: 1vw * $size;
+  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
+    width: 2.6px * $size;
+  }
+  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
+    width: 7px * $size;
+  }
+}

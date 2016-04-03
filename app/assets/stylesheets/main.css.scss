@@ -1,70 +1,12 @@
-//n    1  2  3  4  5  6   7   8   9  10  11   12   13   14   15   16
-$fib: (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987);
-
-$container-width-percentage: nth($fib, 11);
-$container-height-percentage-of-width: nth($fib, 12);
-
-$max-width: 1px * nth($fib, 15);
-$max-height: 1px * nth($fib, 16);
-
-$min-width: 1px * nth($fib, 13);
-$min-height: 1px * nth($fib, 14);
-
-$width-of-screen-when-things-stop-scaling-smaller: $min-width * 100 / $container-width-percentage;
-$width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-width-percentage;
-
-$background-grey: #202020;
-
-.with-border {
-  border: 0.5vw solid $background-grey;
-  box-sizing: border-box;
-}
-
 body {
   background-color: $background-grey;
-}
-
-.the-container {
-  width: 1vw * $container-width-percentage;
-  height: 1vw * $container-height-percentage-of-width;
-
-  max-width: $max-width;
-  max-height: $max-height;
-
-  min-width: $min-width;
-  min-height: $min-height;
-
-  margin-top: 1px * nth($fib, 8);
-  margin-left: auto;
-  margin-right: auto;
-
-  display: flex;
-  flex-direction: column;
-
-  font-family: 'Oswald', sans-serif;
   color: $background-grey;
   a {
     color: $background-grey;
   }
-  font-weight: 300;
 
-  @extend .with-border;
-}
-
-.a-row {
-  display: flex;
-  align-items: stretch;
-}
-
-.row-section {
-  text-align: center;
-
-  @extend .with-border;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 canvas {
@@ -72,79 +14,29 @@ canvas {
   height: 20vw;
 }
 
-.category {
-  font-weight: 400;
-
-  font-size: 8vw;
-  line-height: 8vw;
-  height: 8vw;
-  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-    font-size: 21px;
-    line-height: 21px;
-    height: 21px;
-  }
-  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-    font-size: 56px;
-    line-height: 56px;
-    height: 56px;
-  }
-}
-
 .name-row {
   flex: 6;
-  color: #B52D0B;
-  background-color: mix($background-grey, #B52D0B, 61.8%);
+  @include unselectable_section_colors($red-for-me);
 
   .name {
     flex: 1;
-    text-align: center;
 
     .name-text {
-      display: inline-block;
       font-weight: 700;
-
-      font-size: 9vw;
-      line-height: 9vw;
-      height: 9vw;
-      @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-        font-size: 23px;
-        line-height: 23px;
-        height: 23px;
-      }
-      @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-        font-size: 63px;
-        line-height: 63px;
-        height: 63px;
-      }
+      @include scalable_w_limits(9);
     }
   }
 }
 
 .info-row {
   flex: 9;
-  color: #B52D0B;
-  background-color: mix($background-grey, #B52D0B, 61.8%);
+  @include unselectable_section_colors($red-for-me);
 
   .info {
     flex: 5;
 
     .info-text {
-      display: inline-block;
-      text-align: left;
-
-      font-size: 5vw;
-      line-height: 5vw;
-      height: 15vw;
-      @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-        font-size: 13px;
-        line-height: 13px;
-        height: 39px;
-      }
-      @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-        font-size: 35px;
-        line-height: 35px;
-        height: 105px;
-      }
+      @include scalable_w_limits(5);
     }
   }
 
@@ -156,54 +48,34 @@ canvas {
 .code-links-row {
   flex: 5;
 
-
   .cv, .li, .gh, .rb, .dt {
     flex: 1;
     a {
       transition: color 0.5s;
       &:hover {
-        color: #eee;
+        color: $hovered;
       }
       &.section-hovered {
-        color: #999;
+        color: $section-hovered;
       }
     }
   }
 
   .cv, .li {
-    background-color: #b24308; //blend of name and code
+    background-color: mix($red-for-me, $orange-for-code);
   }
 
   .gh, .rb, .dt {
-    background-color: #AF5A05; //blend with CC6600
+    background-color: $orange-for-code;
   }
 
   .dt-wrapper {
-    display: inline-block;
-    width: 10vw;
-    @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-      width: 26px;
-    }
-    @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-      width: 70px;
-    }
+    @include scalable_drempt_wrapper(10);
 
     .dt-text {
-      height: 10vw;
-      width: 5vw;
-      border-radius: 0 10vw 10vw 0;
       float: right;
-      @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-        height: 26px;
-        width: 13px;
-        border-radius: 0 26px 26px 0;
-      }
-      @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-        height: 70px;
-        width: 35px;
-        border-radius: 0 70px 70px 0;
-      }
       background: $background-grey;
+      @include scalable_drempt_extras(10);
     }
   }
 }
@@ -211,10 +83,9 @@ canvas {
 .code-row {
   flex: 8;
 
-  .code { //b
+  .code {
     flex: 1;
-    color: #AF5A05; //blend with CC6600
-    background-color: mix($background-grey, #AF5A05, 61.8%);
+    @include unselectable_section_colors($orange-for-code);
   }
 }
 
@@ -223,88 +94,75 @@ canvas {
 
   .demos {
     flex: 2;
-    background-color: #4b624e; //blend of music vr and code
+    background-color: mix(
+      mix($blue-for-music, $green-for-vr),
+      $orange-for-code,
+      $inv-phi-percent
+    );
   }
 
-  .sc, .gr {
+  .gr, .sc {
     flex: 1;
   }
 
-  .sc {
-    background-color: #3E5A93; //blend of music and code, closer to music
+  .gr {
+    background-color: mix($orange-for-code, $blue-for-music, $inv-phi-percent);
   }
 
-  .gr {
-    background-color: #765A4C; //blend of music and code, closer to code
+  .sc {
+    background-color: mix($blue-for-music, $orange-for-code, $inv-phi-percent);
   }
 }
 
 .vr-music-row {
   flex: 7;
 
-  .vr { //u
+  .vr {
     flex: 1;
-    color: #2D710B; //blend with 339900
-    background-color: mix($background-grey, #2D710B, 61.8%);
+    @include unselectable_section_colors($green-for-vr);
   }
 
-  .music { //w
+  .music {
     flex: 2;
-    color: #055ADA; //blend with 0066FF
-    background-color: mix($background-grey, #055ADA, 61.8%);
+    @include unselectable_section_colors($blue-for-music);
   }
 }
 
 .misc-row {
   flex: 6;
 
-  .film, .vm, .blog { //g
+  .film, .vm, .blog {
     flex: 1;
   }
 
-  .vm {
-    background-color: #83505d; //blend of vr and film
-  }
-
-  .word, .fmi { //r
+  .word, .fmi {
     flex: 2;
   }
 
-  .fmi {
-    background-color: #6f846f; //blend of music and word
-  }
-
-  .blog {
-    background-color: #796b66; //blend of vr, music, word, and film
-  }
-
-  .word {
-    color: #DAAF05; //blend with FFCC00
-    background-color: mix($background-grey, #DAAF05, 61.8%);
-  }
-
   .film {
-    color: #DA30AF; //blend with FF33CC
-    background-color: mix($background-grey, #DA30AF, 61.8%);
+    @include unselectable_section_colors($pink-for-film);
 
     .film-text {
       transform: rotate(270deg);
     }
   }
-}
 
-.fa {
-  font-size: 10vw;
-  line-height: 10vw;
-  height: 10vw;
-  @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
-    font-size: 26px;
-    line-height: 26px;
-    height: 26px;
+  .vm {
+    background-color: mix($green-for-vr, $pink-for-film);
   }
-  @media screen and (min-width: $width-of-screen-when-things-stop-scaling-larger) {
-    font-size: 70px;
-    line-height: 70px;
-    height: 70px;
+
+  .blog {
+    background-color: mix(
+      mix($green-for-vr, $blue-for-music),
+      mix($yellow-for-word, $pink-for-film)
+    );
+  }
+
+  .word {
+    @include unselectable_section_colors($yellow-for-word);
+  }
+
+  .fmi {
+    background-color: mix($blue-for-music, $yellow-for-word);
   }
 }

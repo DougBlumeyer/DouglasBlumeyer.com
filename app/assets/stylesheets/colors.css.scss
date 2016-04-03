@@ -1,0 +1,15 @@
+$background-grey: #222;
+$section-hovered: #888;
+$hovered:         #ddd;
+
+$red-for-me:      #B52D0B;
+$orange-for-code: #AF5A05; //derived by a 50/50 blend bt background-grey and CC6600
+$green-for-vr:    #2D710B; //derived by a 50/50 blend bt background-grey and 339900
+$blue-for-music:  #055ADA; //derived by a 50/50 blend bt background-grey and 0066FF
+$pink-for-film:   #DA30AF; //derived by a 50/50 blend bt background-grey and FF33CC
+$yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFCC00
+
+@mixin unselectable_section_colors($color) {
+  color: $color;
+  background-color: mix($background-grey, $color, $inv-phi-percent);
+}

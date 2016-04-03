@@ -1,0 +1,66 @@
+//n    1  2  3  4  5  6   7   8   9  10  11   12   13   14   15   16
+$fib: (1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987);
+
+$phi: 1.618;
+$inv-phi-percent: 61.8%;
+
+$container-width-percentage: nth($fib, 11);
+$container-height-percentage-of-width: nth($fib, 12);
+
+$max-width: 1px * nth($fib, 15);
+$max-height: 1px * nth($fib, 16);
+
+$min-width: 1px * nth($fib, 13);
+$min-height: 1px * nth($fib, 14);
+
+$width-of-screen-when-things-stop-scaling-smaller: $min-width * 100 / $container-width-percentage;
+$width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-width-percentage;
+
+@mixin with_border {
+  border: 0.5vw solid $background-grey;
+  box-sizing: border-box;
+}
+
+.the-container {
+  width: 1vw * $container-width-percentage;
+  height: 1vw * $container-height-percentage-of-width;
+
+  max-width: $max-width;
+  max-height: $max-height;
+
+  min-width: $min-width;
+  min-height: $min-height;
+
+  margin-top: 1px * nth($fib, 8);
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  @include with-border;
+}
+
+.a-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.row-section {
+  text-align: center;
+
+  @include with-border;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa {
+  @include scalable_w_limits(10);
+}
+
+.category {
+  @include scalable_w_limits(8);
+}
