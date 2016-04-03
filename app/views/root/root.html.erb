@@ -4,6 +4,8 @@
 <%= javascript_include_tag "root/section-hovers" %>
 <div class="the-container">
 
+
+
   <div class="a-row name-row">
     <div class="name row-section">
       <div class="name-text">
@@ -11,35 +13,52 @@
       </div>
     </div>
   </div>
+
+
+
   <div class="a-row info-row">
     <div class="info row-section">
-      <div class="info-text">@gmail.com</div>
-      <div class="info-text">San Francisco</div>
-      <div class="info-text">847.922.1483</div>
+      <div class="info-text">
+        <a href="mailto:douglas.blumeyer@gmail.com">@gmail.com</a>
+      </div>
+      <div class="info-text">
+        San Francisco
+      </div>
+      <div class="info-text">
+        <a href="tel:847-922-1483">847.922.1483</a>
+      </div>
     </div>
+
     <div class="photo row-section">
       <%= image_tag "good_one_small.jpg", width: "89%" %>
     </div>
   </div>
+
+
+
   <div class="a-row code-links-row">
     <div class="cv row-section code-category">
       <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file" %>
     </div>
+
     <div class="li row-section code-category">
       <a href="https://linkedin.com/in/douglasblumeyer" target="_blank">
         <i class="fa fa-linkedin-square"></i>
       </a>
     </div>
+
     <div class="gh row-section code-category">
       <a href="https://github.com/DougBlumeyer" target="_blank">
         <i class="fa fa-github-square"></i>
       </a>
     </div>
+
     <div class="rb row-section code-category">
       <a href="http://rainbowbbles.com" target="_blank">
         <%= image_tag "rainbowbbles-screenshot.jpg", width: "67%" %>
       </a>
     </div>
+
     <div class="dt row-section code-category">
       <a href="http://drem.pt" target="_blank">
         <div class="dt-wrapper">
@@ -48,6 +67,9 @@
       </a>
     </div>
   </div>
+
+
+
   <div class="a-row code-row code-category">
     <div class="code row-section">
       <div class="code-text category">
@@ -55,6 +77,9 @@
       </div>
     </div>
   </div>
+
+
+
   <div class="a-row music-links-row">
     <div class="demos row-section code-category">
       <canvas id="myCanvas"></canvas>
@@ -63,56 +88,72 @@
       <script> iHateYou = '<%= asset_path 'jhgjh.unity_55.obj' %>';	</script>
       <%= javascript_include_tag "dougstooth/dougstooth" %>
     </div>
+
     <div class="gr row-section code-category">
       <a href="http://geometrhythm.com" target="_blank">
         <%= image_tag "geometrhythm_logo.png", width: "100%" %>
       </a>
     </div>
+
     <div class="sc row-section code-category">
       <a href="https://soundcloud.com/cmloegcmluin" target="_blank">
         <i class="fa fa-soundcloud"></i>
       </a>
     </div>
   </div>
+
+
+
   <div class="a-row vr-music-row">
     <div class="vr row-section">
       <div class="category vr-text">
         vr
       </div>
     </div>
+
     <div class="music row-section">
       <div class="category music-text">
         music
       </div>
     </div>
   </div>
+
+
+
   <div class="a-row misc-row">
     <div class="film row-section">
       <div class="category film-text">
         film
       </div>
     </div>
+
     <div class="vm row-section">
       <a href="https://vimeo.com/douglasblumeyer" target="_blank">
         <i class="fa fa-vimeo-square"></i>
       </a>
     </div>
+
     <div class="blog row-section">
       <a href="http://cmloegcmluin.com" target="_blank">
         <%= image_tag "four_eyes.png", width: "100%" %>
       </a>
     </div>
+
     <div class="word row-section">
       <div class="category word-text">
         word
       </div>
     </div>
+
     <div class="fmi row-section">
       <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank">
         <%= image_tag "FMI_screenshot.jpg", width: "67%" %>
       </a>
     </div>
   </div>
+
+
+
 </div>
 </body>
 </html>
