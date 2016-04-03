@@ -12,6 +12,7 @@ gem "font-awesome-rails"
 gem 'arel', '6.0.0.beta2'
 gem "nokogiri", ">= 1.6.7.rc"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
+gem 'pg'
 
 group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
