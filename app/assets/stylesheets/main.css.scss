@@ -12,6 +12,7 @@ body {
 
   g {
     fill: $background-grey;
+    transition: fill 0.3s;
   }
 
   font-family: 'Oswald', sans-serif;

@@ -33,6 +33,8 @@ $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFC
 }
 
 @mixin hover_color_drempt {
+  transition: background-color 0.3s;
+
   &:hover {
     background-color: $hovered;
   }
