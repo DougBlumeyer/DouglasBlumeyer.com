@@ -3,8 +3,10 @@
 <body>
   <div class="the-container">
     <div class="a-row name-row">
-      <div class="name">
-        DOUGLAS BLUMEYER
+      <div class="name row-section">
+        <div class="name-text">
+          DOUGLAS BLUMEYER
+        </div>
       </div>
     </div>
     <div class="a-row info-row">
@@ -16,29 +18,29 @@
         </div>
       </div>
       <div class="photo row-section">
-        <%= image_tag "good_one_small.jpg", width: "100%" %>
+        <%= image_tag "good_one_small.jpg", width: "89%" %>
       </div>
     </div>
     <div class="a-row code-links-row">
-      <div class="cv row-section">
+      <div class="cv row-section code-category">
         <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file" %>
       </div>
-      <div class="gh row-section">
-        <a href="https://github.com/DougBlumeyer" target="_blank">
-          <i class="fa fa-github-square"></i>
-        </a>
-      </div>
-      <div class="li row-section">
+      <div class="li row-section code-category">
         <a href="https://linkedin.com/in/douglasblumeyer" target="_blank">
           <i class="fa fa-linkedin-square"></i>
         </a>
       </div>
-      <div class="rb row-section">
-        <a href="http://rainbowbbles.com" target="_blank">
-          <%= image_tag "rainbowbbles-screenshot.jpg", width: "100%" %>
+      <div class="gh row-section code-category">
+        <a href="https://github.com/DougBlumeyer" target="_blank">
+          <i class="fa fa-github-square"></i>
         </a>
       </div>
-      <div class="dt row-section">
+      <div class="rb row-section code-category">
+        <a href="http://rainbowbbles.com" target="_blank">
+          <%= image_tag "rainbowbbles-screenshot.jpg", width: "67%" %>
+        </a>
+      </div>
+      <div class="dt row-section code-category">
         <a href="http://drem.pt" target="_blank">
           <div class="dt-wrapper">
             <div class="dt-text"></div>
@@ -46,36 +48,47 @@
         </a>
       </div>
     </div>
-    <div class="a-row code-row">
-      <div class="category code row-section">code</div>
-      <!-- <div class="why"></div> -->
+    <div class="a-row code-row code-category">
+      <div class="code row-section">
+        <div class="code-text category">
+          code
+        </div>
+      </div>
     </div>
     <div class="a-row music-links-row">
-      <div class="demos row-section">
+      <div class="demos row-section code-category">
         <canvas id="myCanvas"></canvas>
         <%= javascript_include_tag "dougstooth/OrbitControls" %>
         <%= javascript_include_tag "dougstooth/OBJLoader" %>
         <script> iHateYou = '<%= asset_path 'jhgjh.unity_55.obj' %>';	</script>
         <%= javascript_include_tag "dougstooth/dougstooth" %>
       </div>
-      <div class="sc row-section">
+      <div class="sc row-section code-category">
         <a href="https://soundcloud.com/cmloegcmluin" target="_blank">
           <i class="fa fa-soundcloud"></i>
         </a>
       </div>
-      <div class="gr row-section">
+      <div class="gr row-section code-category">
         <a href="http://geometrhythm.com" target="_blank">
           <%= image_tag "geometrhythm_logo.png", width: "100%" %>
         </a>
       </div>
     </div>
     <div class="a-row vr-music-row">
-      <div class="category vr row-section">VR</div>
-      <div class="category music row-section">music</div>
+      <div class="vr row-section">
+        <div class="category vr-text">
+          vr
+        </div>
+      </div>
+      <div class="music row-section">
+        <div class="category music-text">
+          music
+        </div>
+      </div>
     </div>
     <div class="a-row misc-row">
-      <div class="category film row-section">
-        <div class="film-text">
+      <div class="film row-section">
+        <div class="category film-text">
           film
         </div>
       </div>
@@ -89,26 +102,26 @@
           <%= image_tag "four_eyes.png", width: "100%" %>
         </a>
       </div>
-      <div class="category words row-section">
-        words
+      <div class="word row-section">
+        <div class="category word-text">
+          word
+        </div>
       </div>
       <div class="fmi row-section">
         <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank">
-          <%= image_tag "FMI_screenshot.jpg", width: "100%" %>
+          <%= image_tag "FMI_screenshot.jpg", width: "67%" %>
         </a>
       </div>
     </div>
   </div>
-
-  <!-- <%= link_to image_tag("Dougstooth.png"), dougstooth_index_path, class: "img_lnk" %>
-  <%= link_to image_tag("othoundsto_screenshot.png"), othoundsto_index_path, class: "img_lnk" %>
-  <%= link_to image_tag("thousoondth - final.png"), thousoondth_index_path, class: "img_lnk" %>
-
-  <h1>What's up?</h1>
-  <br>Would you like to work together on something?
-  I'm looking forward to hearing from you.<br><br>
-
-   -->
-
 </body>
+
+<script>
+  $('.code').mouseover(function() {
+    $('.code-category').addClass('section-hovered');
+  });
+  $('.code').mouseout(function() {
+    $('.code-category').removeClass('section-hovered');
+  });
+</script>
 </html>
