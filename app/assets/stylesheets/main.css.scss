@@ -10,8 +10,8 @@ body {
 }
 
 canvas {
-  width: 20vw;
-  height: 20vw;
+  @include scalable_w_limits(20);
+  @include scalable_width(20);
 }
 
 .name-row {
@@ -70,7 +70,7 @@ canvas {
   }
 
   .dt-wrapper {
-    @include scalable_drempt_wrapper(10);
+    @include scalable_width(10);
 
     .dt-text {
       float: right;

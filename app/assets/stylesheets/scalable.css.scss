@@ -33,7 +33,7 @@
   }
 }
 
-@mixin scalable_drempt_wrapper($size) {
+@mixin scalable_width($size) {
   width: 1vw * $size;
   @media screen and (max-width: $width-of-screen-when-things-stop-scaling-smaller) {
     width: 2.6px * $size;
