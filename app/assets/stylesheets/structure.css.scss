@@ -55,6 +55,8 @@ $width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include hover_color;
 }
 
 .fa {

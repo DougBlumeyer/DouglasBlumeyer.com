@@ -16,10 +16,12 @@ $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFC
 
 @mixin hover_color {
   &:hover {
-    color: $hovered;
-
     g {
-      fill: $hovered;
+      fill: $hovered !important;
+    }
+
+    a {
+      color: $hovered !important;
     }
   }
 
@@ -29,17 +31,23 @@ $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFC
     g {
       fill: $section-hovered;
     }
+
+    a {
+      color: $section-hovered;
+    }
   }
 }
 
 @mixin hover_color_drempt {
-  transition: background-color 0.3s;
-
   &:hover {
-    background-color: $hovered;
+    .dt-text {
+      background-color: $hovered !important;
+    }
   }
 
   &.section-hovered {
-    background-color: $section-hovered;
+    .dt-text {
+      background-color: $section-hovered;
+    }
   }
 }

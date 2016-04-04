@@ -384,11 +384,21 @@ THREE.OrbitControls = function ( object, domElement, spotLight ) {
 	}
 
 	function onMouseOver( ) {
+		isHovered = true;
 		spotLight.intensity = 1;
 	}
 
 	function onMouseOut( ) {
+		isHovered = false;
 		spotLight.intensity = 0.3;
+	}
+
+	function onMouseOverSection() {
+		if (!isHovered)	spotLight.intensity = 0.65;
+	}
+
+	function onMouseOutSection() {
+		if (!isHovered)	spotLight.intensity = 0.3;
 	}
 
 	function onMouseDown( event ) {
@@ -706,7 +716,12 @@ THREE.OrbitControls = function ( object, domElement, spotLight ) {
 	this.domElement.addEventListener( 'touchmove', touchmove, false );
 	this.domElement.addEventListener( 'mouseover', onMouseOver, false );
 	this.domElement.addEventListener( 'mouseout', onMouseOut, false );
-
+	var codeCategoryEls = document.querySelectorAll('.code-category');
+	for (var i = 0; i < codeCategoryEls.length; i++) {
+		codeCategoryEls[i].addEventListener( 'mouseover', onMouseOverSection, false);
+		codeCategoryEls[i].addEventListener( 'mouseout', onMouseOutSection, false);
+	}
+	var isHovered = false;
 
 	window.addEventListener( 'keydown', onKeyDown, false );
 

@@ -6,8 +6,6 @@ body {
     color: $background-grey;
     transition: color 0.3s;
     text-decoration: none;
-
-    @include hover-color;
   }
 
   g {
@@ -46,8 +44,15 @@ canvas {
   .info {
     flex: 5;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include with_border;
+
     .info-text {
       @include scalable_w_limits(5);
+      @include hover_color;
+      text-align: center;
     }
   }
 
@@ -71,14 +76,18 @@ canvas {
     background-color: $orange-for-code;
   }
 
+  .dt {
+    @include hover_color_drempt;
+  }
+
   .dt-wrapper {
     @include scalable_width(10);
 
     .dt-text {
       float: right;
-      background: $background-grey;
+      background-color: $background-grey;
+      transition: background-color 0.3s;
       @include scalable_drempt_extras(10);
-      @include hover_color_drempt;
     }
   }
 }
