@@ -17,7 +17,7 @@ $(function() {
 //    Zoom - middle mouse, or mousewheel / touch: two finger spread or squish
 //    Pan - right mouse, or arrow keys / touch: three finter swipe
 
-THREE.OrbitControls = function ( object, domElement ) {
+THREE.OrbitControls = function ( object, domElement, spotLight ) {
 
 	this.object = object;
 	this.domElement = ( domElement !== undefined ) ? domElement : document;
@@ -383,6 +383,14 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	}
 
+	function onMouseOver( ) {
+		spotLight.intensity = 1;
+	}
+
+	function onMouseOut( ) {
+		spotLight.intensity = 0.3;
+	}
+
 	function onMouseDown( event ) {
 
 		if ( scope.enabled === false ) return;
@@ -696,6 +704,9 @@ THREE.OrbitControls = function ( object, domElement ) {
 	this.domElement.addEventListener( 'touchstart', touchstart, false );
 	this.domElement.addEventListener( 'touchend', touchend, false );
 	this.domElement.addEventListener( 'touchmove', touchmove, false );
+	this.domElement.addEventListener( 'mouseover', onMouseOver, false );
+	this.domElement.addEventListener( 'mouseout', onMouseOut, false );
+
 
 	window.addEventListener( 'keydown', onKeyDown, false );
 

@@ -30,6 +30,7 @@ directionalLight.position.set( -2, -2, -1 );
 directionalLight.target.position.set(2,4,1 );
 
 var spotLight = new THREE.SpotLight();
+spotLight.intensity = 0.3;
 spotLight.position.set( 2, 4, 1 );
 spotLight.castShadow = true;
 
@@ -51,7 +52,7 @@ scene.add( spotLight );
 
 camera.position.z = 5;
 
-controls = new THREE.OrbitControls( camera , renderer.domElement);
+controls = new THREE.OrbitControls( camera , renderer.domElement, spotLight);
 controls.damping = 0.2;
 
 var manager = new THREE.LoadingManager();
@@ -64,7 +65,7 @@ onError = function ( xhr ) {
 };
 
 var loader = new THREE.OBJLoader( manager );
-var obj_path = iHateYou;
+var obj_path = dougstooth;
 loader.load(obj_path, function ( object ) {
 
 
