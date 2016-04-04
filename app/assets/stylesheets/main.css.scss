@@ -44,20 +44,21 @@ canvas {
   .info {
     flex: 5;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include centered_column;
     @include with_border;
 
     .info-text {
       @include scalable_w_limits(5);
       @include hover_color;
-      text-align: center;
     }
   }
 
   .photo {
     flex: 4;
+
+    img {
+      margin: auto;
+    }
   }
 }
 
@@ -81,6 +82,7 @@ canvas {
   }
 
   .dt-wrapper {
+    margin: auto;
     @include scalable_width(10);
 
     .dt-text {

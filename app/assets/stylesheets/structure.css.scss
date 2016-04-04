@@ -21,6 +21,13 @@ $width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-
   box-sizing: border-box;
 }
 
+@mixin centered_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .the-container {
   width: 1vw * $container-width-percentage;
   height: 1vw * $container-height-percentage-of-width;
@@ -47,15 +54,8 @@ $width-of-screen-when-things-stop-scaling-larger: $max-width * 100 / $container-
 }
 
 .row-section {
-  text-align: center;
-
   @include with-border;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  @include centered_column;
   @include hover_color;
 }
 

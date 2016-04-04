@@ -7,7 +7,7 @@
 
 
   <div class="a-row name-row">
-    <div class="name row-section">
+    <div class="name row-section me">
       <div class="name-text">
         douglas.blumeyer
       </div>
@@ -17,19 +17,19 @@
 
 
   <div class="a-row info-row">
-    <div class="info">
-      <div class="info-text">
+    <div class="info me">
+      <div class="info-text me-category">
         <a href="mailto:douglas.blumeyer@gmail.com">@gmail.com</a>
       </div>
       <div class="info-text">
         San Francisco
       </div>
-      <div class="info-text">
+      <div class="info-text me-category">
         <a href="tel:847-922-1483">847.922.1483</a>
       </div>
     </div>
 
-    <div class="photo row-section">
+    <div class="photo row-section me-category">
       <%= image_tag "good_one_small.jpg", width: "89%" %>
     </div>
   </div>
@@ -37,11 +37,11 @@
 
 
   <div class="a-row code-links-row">
-    <div class="cv row-section code-category">
+    <div class="cv row-section code-category me-category">
       <%= link_to "", image_path('Douglas_Blumeyer_2015_resume.pdf'), target: "_blank", class: "fa fa-file" %>
     </div>
 
-    <div class="li row-section code-category">
+    <div class="li row-section code-category me-category">
       <a href="https://linkedin.com/in/douglasblumeyer" target="_blank">
         <i class="fa fa-linkedin-square"></i>
       </a>
@@ -81,7 +81,7 @@
 
 
   <div class="a-row music-links-row">
-    <div class="demos row-section code-category">
+    <div class="demos row-section code-category music-category vr-category">
       <%= link_to root_path do %>
         <canvas id="myCanvas"></canvas>
         <%= javascript_include_tag "dougstooth/OrbitControls" %>
@@ -91,13 +91,13 @@
       <% end %>
     </div>
 
-    <div class="gr row-section code-category">
+    <div class="gr row-section code-category music-category">
       <a href="http://geometrhythm.com" target="_blank">
         <%= inline_svg("geometrhythm.svg", {size: '67%'}) %>
       </a>
     </div>
 
-    <div class="sc row-section code-category">
+    <div class="sc row-section code-category music-category">
       <a href="https://soundcloud.com/cmloegcmluin" target="_blank">
         <i class="fa fa-soundcloud"></i>
       </a>
@@ -107,13 +107,13 @@
 
 
   <div class="a-row vr-music-row">
-    <div class="vr row-section">
+    <div class="vr row-section vr-category">
       <div class="category vr-text">
         vr
       </div>
     </div>
 
-    <div class="music row-section">
+    <div class="music row-section music-category">
       <div class="category music-text">
         music
       </div>
@@ -123,31 +123,31 @@
 
 
   <div class="a-row misc-row">
-    <div class="film row-section">
+    <div class="film row-section film-category">
       <div class="category film-text">
         film
       </div>
     </div>
 
-    <div class="vm row-section">
+    <div class="vm row-section film film-category vr-category">
       <a href="https://vimeo.com/douglasblumeyer" target="_blank">
         <i class="fa fa-vimeo-square"></i>
       </a>
     </div>
 
-    <div class="blog row-section">
+    <div class="blog row-section word-category film-category vr-category">
       <a href="http://cmloegcmluin.com" target="_blank">
         <%= inline_svg("four_eyes.svg", {size: '100%'}) %>
       </a>
     </div>
 
-    <div class="word row-section">
+    <div class="word row-section word-category">
       <div class="category word-text">
         word
       </div>
     </div>
 
-    <div class="fmi row-section">
+    <div class="fmi row-section music-category word-category">
       <a href="https://www.dropbox.com/s/kqd5emgc41b1ap4/Fun%20Musical%20Ideas%20-%20v1.0%20-%20July%202014.pdf?dl=0" target="_blank">
         <%= inline_svg("fmi.svg", {size: '89%'}) %>
       </a>

@@ -716,10 +716,10 @@ THREE.OrbitControls = function ( object, domElement, spotLight ) {
 	this.domElement.addEventListener( 'touchmove', touchmove, false );
 	this.domElement.addEventListener( 'mouseover', onMouseOver, false );
 	this.domElement.addEventListener( 'mouseout', onMouseOut, false );
-	var codeCategoryEls = document.querySelectorAll('.code-category');
-	for (var i = 0; i < codeCategoryEls.length; i++) {
-		codeCategoryEls[i].addEventListener( 'mouseover', onMouseOverSection, false);
-		codeCategoryEls[i].addEventListener( 'mouseout', onMouseOutSection, false);
+	var categoryEls = document.querySelectorAll('.code-category, .vr-category, .music-category');
+	for (var i = 0; i < categoryEls.length; i++) {
+		categoryEls[i].addEventListener( 'mouseover', onMouseOverSection, false);
+		categoryEls[i].addEventListener( 'mouseout', onMouseOutSection, false);
 	}
 	var isHovered = false;
 
