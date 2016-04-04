@@ -22,6 +22,7 @@ body {
 canvas {
   @include scalable_w_limits(20);
   @include scalable_width(20);
+  cursor: pointer;
 }
 
 .name-row {
