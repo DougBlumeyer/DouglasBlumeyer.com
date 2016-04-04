@@ -25,10 +25,10 @@ canvas {
 
 .name-row {
   flex: 6;
-  @include unselectable_section_colors($red-for-me);
 
   .name {
     flex: 1;
+    @include unselectable_section_colors($red-for-me);
 
     .name-text {
       font-weight: 700;
