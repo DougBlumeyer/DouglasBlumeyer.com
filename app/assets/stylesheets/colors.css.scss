@@ -14,6 +14,13 @@ $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFC
   background-color: mix($background-grey, $color, $inv-phi-percent);
 }
 
+@mixin dimmable_color($color) {
+  background-color: $color;
+  &.not-hovered:not(.section-hovered) {
+    background-color: mix($background-grey, $color, $inv-phi-percent);
+  }
+}
+
 @mixin hover_color {
   &:hover {
     g {

@@ -39,10 +39,10 @@ canvas {
 
 .info-row {
   flex: 9;
-  @include unselectable_section_colors($red-for-me);
 
   .info {
     flex: 5;
+    @include dimmable_color($red-for-me);
 
     @include centered_column;
     @include with_border;
@@ -55,6 +55,7 @@ canvas {
 
   .photo {
     flex: 4;
+    @include unselectable_section_colors($red-for-me);
 
     img {
       margin: auto;
@@ -70,11 +71,11 @@ canvas {
   }
 
   .cv, .li {
-    background-color: mix($red-for-me, $orange-for-code);
+    @include dimmable_color(mix($red-for-me, $orange-for-code));
   }
 
   .gh, .rb, .dt {
-    background-color: $orange-for-code;
+    @include dimmable_color($orange-for-code);
   }
 
   .dt {
@@ -108,10 +109,12 @@ canvas {
 
   .demos {
     flex: 2;
-    background-color: mix(
-      mix($blue-for-music, $green-for-vr),
-      $orange-for-code,
-      $inv-phi-percent
+    @include dimmable_color(
+      mix(
+        mix($blue-for-music, $green-for-vr),
+        $orange-for-code,
+        $inv-phi-percent
+      )
     );
   }
 
@@ -120,11 +123,15 @@ canvas {
   }
 
   .gr {
-    background-color: mix($orange-for-code, $blue-for-music, $inv-phi-percent);
+    @include dimmable_color(
+      mix($orange-for-code, $blue-for-music, $inv-phi-percent)
+    );
   }
 
   .sc {
-    background-color: mix($blue-for-music, $orange-for-code, $inv-phi-percent);
+    @include dimmable_color(
+      mix($blue-for-music, $orange-for-code, $inv-phi-percent)
+    );
   }
 }
 
@@ -162,13 +169,17 @@ canvas {
   }
 
   .vm {
-    background-color: mix($green-for-vr, $pink-for-film);
+    @include dimmable_color(
+      mix($green-for-vr, $pink-for-film)
+    );
   }
 
   .blog {
-    background-color: mix(
-      mix($green-for-vr, $blue-for-music),
-      mix($yellow-for-word, $pink-for-film)
+    @include dimmable_color(
+      mix(
+        mix($green-for-vr, $blue-for-music),
+        mix($yellow-for-word, $pink-for-film)
+      )
     );
   }
 
@@ -177,6 +188,8 @@ canvas {
   }
 
   .fmi {
-    background-color: mix($blue-for-music, $yellow-for-word);
+    @include dimmable_color(
+      mix($blue-for-music, $yellow-for-word)
+    );
   }
 }
