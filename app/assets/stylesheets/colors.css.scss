@@ -9,16 +9,25 @@ $blue-for-music:  #055ADA; //derived by a 50/50 blend bt background-grey and 006
 $pink-for-film:   #DA30AF; //derived by a 50/50 blend bt background-grey and FF33CC
 $yellow-for-word: #DAAF05; //derived by a 50/50 blend bt background-grey and FFCC00
 
-@mixin unselectable_section_colors($color) {
-  color: $color;
-  background-color: mix($background-grey, $color, $inv-phi-percent);
-}
-
 @mixin dimmable_color($color) {
   background-color: $color;
   &.not-hovered:not(.section-hovered) {
     background-color: mix($background-grey, $color, $inv-phi-percent);
   }
+}
+
+@mixin dimmable_main_color($color) {
+  color: $color;
+  &.not-hovered:not(.section-hovered) {
+    color: mix($background-grey, $color, $inv-phi-percent);
+  }
+}
+
+@mixin unselectable_section_colors($color) {
+  @include dimmable_main_color($color);
+  @include dimmable_color(
+    mix($background-grey, $color, $inv-phi-percent)
+  );
 }
 
 @mixin hover_color {
