@@ -17,12 +17,6 @@ body {
   font-weight: 400;
 }
 
-canvas {
-  @include scalable_w_limits(20);
-  @include scalable_width(20);
-  cursor: pointer;
-}
-
 .name-row {
   flex: 6;
 
@@ -116,6 +110,12 @@ canvas {
         $inv-phi-percent
       )
     );
+
+    canvas {
+      @include scalable_w_limits(20);
+      @include scalable_width(20);
+      cursor: pointer;
+    }
   }
 
   .gr, .sc {
