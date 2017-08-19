@@ -58,9 +58,9 @@ body {
 }
 
 .code-links-row {
-  flex: 5;
+  flex: 6;
 
-  .cv, .li, .gh, .rb, .dt {
+  .cv, .li, .gh, .rb, .dt, .ht {
     flex: 1;
   }
 
@@ -68,7 +68,7 @@ body {
     @include dimmable_color(mix($red-for-me, $orange-for-code));
   }
 
-  .gh, .rb, .dt {
+  .gh, .rb, .dt, .ht {
     @include dimmable_color($orange-for-code);
   }
 
@@ -150,13 +150,13 @@ body {
 }
 
 .misc-row {
-  flex: 6;
+  flex: 7;
 
-  .film, .vm, .blog {
+  .film, .vm, .blog, .word, .uncannly {
     flex: 1;
   }
 
-  .word, .fmi {
+   .fmi {
     flex: 2;
   }
 
@@ -183,8 +183,16 @@ body {
     );
   }
 
+  .uncannly {
+    @include dimmable_color($yellow-for-word);
+  }
+
   .word {
     @include unselectable_section_colors($yellow-for-word);
+
+    .word-text {
+      transform: rotate(270deg);
+    }
   }
 
   .fmi {
