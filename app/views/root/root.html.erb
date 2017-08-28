@@ -88,13 +88,11 @@
 
   <div class="a-row music-links-row">
     <div class="demos row-section code-category music-category vr-category">
-      <%= link_to root_path do %>
-        <canvas id="myCanvas"></canvas>
-        <%= javascript_include_tag "dougstooth/OrbitControls" %>
-        <%= javascript_include_tag "dougstooth/OBJLoader" %>
-        <script> dougstooth = '<%= asset_path 'dougstooth.obj' %>';	</script>
-        <%= javascript_include_tag "dougstooth/dougstooth" %>
-      <% end %>
+      <canvas id="myCanvas"></canvas>
+      <%= javascript_include_tag "dougstooth/OrbitControls" %>
+      <%= javascript_include_tag "dougstooth/OBJLoader" %>
+      <script> dougstooth = '<%= asset_path 'dougstooth.obj' %>';	</script>
+      <%= javascript_include_tag "dougstooth/dougstooth" %>
     </div>
 
     <div class="gr row-section code-category music-category">

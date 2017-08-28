@@ -103,6 +103,7 @@ body {
 
   .demos {
     flex: 2;
+    align-items: center;
     @include dimmable_color(
       mix(
         mix($blue-for-music, $green-for-vr),
