@@ -3,13 +3,20 @@ $(function() {
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, 1, 1, 10000 );
 
-// var c = $("#myCanvas");
-var renderer = new THREE.WebGLRenderer({canvas: myCanvas, alpha: true});
-// renderer.setSize(800, 400);
+var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-// var renderer = new THREE.WebGLRenderer({alpha: true});
-// renderer.setClearColor( 0xffffff, 0);
-// renderer.setSize( window.innerWidth, window.innerHeight );
+var canvasDimensions = Math.min(x, y)
+
+myCanvas.width = canvasDimensions;
+myCanvas.height = canvasDimensions;
+
+var renderer = new THREE.WebGLRenderer({canvas: myCanvas, alpha: true});
+
 renderer.shadowMapEnabled = true;
 
 renderer.shadowCameraNear = 3;
@@ -20,10 +27,6 @@ renderer.shadowMapBias = 0.0039;
 renderer.shadowMapDarkness = 0.5;
 renderer.shadowMapWidth = 1024;
 renderer.shadowMapHeight = 1024;
-// document.body.appendChild( renderer.domElement );
-
-
-var texture = new THREE.Texture();
 
 var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set( -2, -2, -1 );
@@ -68,8 +71,6 @@ var loader = new THREE.OBJLoader( manager );
 var obj_path = dougstooth;
 loader.load(obj_path, function ( object ) {
 
-
-
   object.traverse( function ( child ) {
 
     if ( child instanceof THREE.Mesh ) {
@@ -85,11 +86,12 @@ loader.load(obj_path, function ( object ) {
   window.bob = object;
 
   scene.add( object );
-
 });
 
 var render = function () {
   requestAnimationFrame( render );
+
+  if (!window.bob) return;
 
   window.bob.rotation.x += 0.001;
   window.bob.rotation.y += 0.001;
