@@ -1,3 +1,6 @@
+start:
+	rails server
+
 setup:
 	bundle install
 
