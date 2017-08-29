@@ -12,3 +12,4 @@ login:
 
 deploy:
 	make setup && make compile && make login && cf push
+
