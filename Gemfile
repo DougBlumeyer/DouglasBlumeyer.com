@@ -14,5 +14,5 @@ gem 'autoprefixer-rails'
 gem "font-awesome-rails"
 gem 'arel'
 gem "nokogiri", ">= 1.6.7.rc"
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
+gem 'tzinfo-data'
 gem 'inline_svg'
