@@ -7,9 +7,8 @@ setup:
 compile:
 	RAILS_ENV=production bundle exec rake assets:precompile
 
-login:
-	cf login -a api.run.pivotal.io -o ${PWS_ORG} -s ${PWS_SPACE} -u ${PWS_USERNAME} -p ${PWS_PASSWORD}
+clean:
+	rm -r public/* && rm -r tmp/* && rm -r log/*
 
 deploy:
-	make setup && make compile && make login && cf push
-
+	make setup && make clean && make compile && git push heroku master
